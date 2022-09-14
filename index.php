@@ -507,8 +507,8 @@
                                 </div>
                                 <p class="pt-2">
                                     <?php
-include "../controlador/conexion.php";
-include "../controlador/operacion.php";
+include "controlador/conexion.php";
+include "controlador/operacion.php";
 ?>
                                      <center><font class="solo">Registros del gtre</font></center>
                                     <div class="contener">
