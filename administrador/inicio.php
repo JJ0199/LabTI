@@ -80,7 +80,7 @@ if (!isset($_SESSION['nombre'])) {
                             <div class="rightside full-height">
                                 <ul class="custom-flex full-height">
                                     <li class="book-appointment">
-                                        <a href="../close.php">
+                                        <a href="../controlador/close.php">
                                             Cerrar session
                                         </a>
                                     </li>
