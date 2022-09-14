@@ -507,10 +507,10 @@
                                 </div>
                                 <p class="pt-2">
                                     <?php
-include "controlador/conexion.php";
-include "controlador/operacion.php";
+include "../controlador/conexion.php";
+include "../controlador/operacion.php";
 ?>
-                                     <center><font class="solo">Registros del Profeso</font></center>
+                                     <center><font class="solo">Registros del gtre</font></center>
                                     <div class="contener">
                                         <?php
 $ob   = new metodos();
@@ -519,9 +519,9 @@ $Data = $ob->VerDatos($sql);
 foreach ($Data as $key) {
     ?>
                 <tr>
-                    <?php $id = $key['id'];?>
-                    
-                    <td><?php echo $key['nombre']; ?></td>
+                <?php $id = $key['id']; ?>
+					<td><?php echo $id; ?></td>
+					<td><?php echo $key['nombre']; ?></td>
                 </tr>
                 <?php
 }
