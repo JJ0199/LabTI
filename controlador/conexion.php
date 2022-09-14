@@ -1,10 +1,6 @@
 <?php
 	class BaseDeDatos extends mysqli
 	{
-		/*private $servidor = '127.0.0.1';
-		private $usuario = "sobrepeso";
-		private $password = "sobrepeso";*/
-
 		private $servidor = 'localhost';
 		private $usuario = "root";
 		private $password = "";
