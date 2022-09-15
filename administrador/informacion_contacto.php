@@ -1,4 +1,4 @@
 <?php 
 
-    include_once("../blog-details.html");
+    include_once("../vista/html/blog-details.html");
 ?>
