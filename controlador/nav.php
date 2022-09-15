@@ -5,31 +5,17 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-5">
                             <div class="leftside"><!--color del contorno de los iconos de facebook, hoja style.css-->
-                                <ul class="custom-flex">
-                                    <li>
-                                        <a class="text-custom-white" href="https://m.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjYyNjc1NDE3LCJjYWxsc2l0ZV9pZCI6Mzg4MTA2NzU5MjM0MTM4fQ%3D%3D&fl">
-                                            <i class="fab fa-facebook-f">
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-custom-white" href="#">
-                                            <i class="fab fa-twitter">
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-custom-white" href="#">
-                                            <i class="fab fa-instagram">
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="text-custom-white" href="#">
-                                            <i class="fab fa-linkedin">
-                                            </i>
-                                        </a>
-                                    </li>
+                                <ul class="custom-flex datos_universidad">
+                                   
+                                        <a href=""><span>Universidad de la cañada</span> </a>
+                                    
+                                    
+                                        <a href=""><span>Correo:</span><div id="correo_uni"></div> </a>
+                                    
+                                    
+                                        <a href=""><span>Telefono:</span><div id="telefono_uni"></div> </a>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -54,7 +40,7 @@
                             <nav>
                                 <div class="main-navigation">
                                     <div class="logo">
-                                        <a href="index.html">
+                                        <a href="inicio.php">
                                             <img alt="logo" class="img-fluid" src="assets/images/arbcl.jpg">
                                             </img>
                                         </a>
@@ -62,7 +48,7 @@
                                     <div class="main-menu">
                                         <ul class="custom-flex">
                                             <li class="menu-item active">
-                                                <a href="index.html">
+                                                <a href="inicio.php">
                                                     Inicio
                                                 </a>
                                             </li>
@@ -254,7 +240,7 @@
                                                         <a href="#">
                                                             Profesores Investigadores
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="administrador/informacion_contacto.php">
                                                                     Información de Contacto
@@ -270,13 +256,13 @@
                                                                     Publicaciones
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             Alumnos Tesistas
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="blog.html">
                                                                     Informacion de Contacto
@@ -287,13 +273,13 @@
                                                                     Curriculum Vitae
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             Estancias Profesionales
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="blog.html">
                                                                     Informacion de Contacto
@@ -304,13 +290,13 @@
                                                                     Curriculum Vitae
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             Servicio Social
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="blog.html">
                                                                     Informacion de Contacto
@@ -321,13 +307,13 @@
                                                                     Curriculum Vitae
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             C.E
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="blog.html">
                                                                     Informacion de Contacto
@@ -338,9 +324,9 @@
                                                                     Curriculum Vitae
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
-                                                    <li class="menu-item menu-item-has-children">
+                                                    <!-- <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             Alumno
                                                         </a>
@@ -356,7 +342,7 @@
                                                                 </a>
                                                             </li>
                                                         </ul>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
@@ -374,11 +360,11 @@
                                                             Eventos
                                                         </a>
                                                     </li>
-                                                    <li class="menu-item">
+                                                    <!-- <li class="menu-item">
                                                         <a href="gallery.html">
                                                             Conferencias
                                                         </a>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </li>
                                         </ul>
