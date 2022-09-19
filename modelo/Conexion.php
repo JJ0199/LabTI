@@ -8,8 +8,11 @@
                 echo "<script>console.log('Error en la conexión'); </script>"; 
             }
         }
+    
+        function login($user,$pass){
+            
+        }
 
-        
 
 
     }
