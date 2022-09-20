@@ -1,3 +1,3 @@
 <?php 
-  include("vista/html/index.html");
+  include("controlador/inicio.php");
 ?>
