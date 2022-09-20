@@ -54,39 +54,39 @@
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#">
-                                                    Nuestro Laboratorio
+                                                    Laboratorio
                                                 </a>
                                                 <ul class="submenu custom">
                                                     <li class="menu-item">
                                                         <a href="#vision">
-                                                            Visión
+                                                            Sistemas inteligentes y distribuidos
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="#mision">
-                                                            Misión
+                                                            Electronica
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="#">
-                                                            Historía
+                                                            Investigación y desarrollo de Software
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="#gallery">
-                                                            Galería
+                                                            Experiencia de usuario
                                                         </a>
                                                     </li>
-                                                    <li class="menu-item">
+                                                    <!-- <li class="menu-item">
                                                         <a href="#contacto">
                                                             Contacto
                                                         </a>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#">
-                                                    Laboratorio
+                                                    Miembros
                                                 </a>
                                                 <ul class="submenu custom">
                                                     <li class="menu-item">
@@ -96,27 +96,27 @@
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="blog-left-sidebar.html">
-                                                            Objetivos
+                                                            Profesores Investigadores
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="blog-right-sidebar.html">
-                                                            Integrantes
+                                                            Colaboradores
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="blog-details.html">
-                                                            Responsable
+                                                            Servicio Social
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="blog-details-left-sidebar.html">
-                                                            Multimedia
+                                                            Estancias Profesionales
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="blog-details-right-sidebar.html">
-                                                            Proyectos
+                                                            Alumnos egresados
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -130,7 +130,7 @@
                                                         <a href="#">
                                                             Proyectos
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="blog.html">
                                                                 </a>
@@ -170,13 +170,13 @@
                                                                     Informe Técnico
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
-                                                            Congresos
+                                                            Cuerpos académicos
                                                         </a>
-                                                        <ul class="submenu custom">
+                                                        <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
                                                                 <a href="blog.html">
                                                                 </a>
@@ -196,9 +196,9 @@
                                                                     Contacto
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </li>
-                                                    <li class="menu-item menu-item-has-children">
+                                                    <!-- <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             Cuerpo Académico
                                                         </a>
@@ -228,39 +228,44 @@
                                                                 </a>
                                                             </li>
                                                         </ul>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#">
-                                                    Miembros del Lab
+                                                    Difusión
                                                 </a>
                                                 <ul class="submenu custom">
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
-                                                            Profesores Investigadores
+                                                            Nuestra historia
                                                         </a>
-                                                        <!-- <ul class="submenu custom">
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="#">
+                                                            Eventos
+                                                        </a>
+                                                        <ul class="submenu custom">
                                                             <li class="menu-item">
-                                                                <a href="administrador/informacion_contacto.php">
-                                                                    Información de Contacto
+                                                                <a href="blog.html">
+                                                                   Conferencias
                                                                 </a>
                                                             </li>
                                                             <li class="menu-item">
                                                                 <a href="blog-left-sidebar.html">
-                                                                    Curriculum Vitae
+                                                                    Congresos
                                                                 </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a href="blog-right-sidebar.html">
-                                                                    Publicaciones
+                                                                <a href="blog-left-sidebar.html">
+                                                                    Eventos
                                                                 </a>
                                                             </li>
-                                                        </ul> -->
+                                                        </ul>
                                                     </li>
                                                     <li class="menu-item menu-item-has-children">
                                                         <a href="#">
-                                                            Alumnos Tesistas
+                                                            Multimedia
                                                         </a>
                                                         <!-- <ul class="submenu custom">
                                                             <li class="menu-item">
@@ -275,57 +280,7 @@
                                                             </li>
                                                         </ul> -->
                                                     </li>
-                                                    <li class="menu-item menu-item-has-children">
-                                                        <a href="#">
-                                                            Estancias Profesionales
-                                                        </a>
-                                                        <!-- <ul class="submenu custom">
-                                                            <li class="menu-item">
-                                                                <a href="blog.html">
-                                                                    Informacion de Contacto
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="blog-left-sidebar.html">
-                                                                    Curriculum Vitae
-                                                                </a>
-                                                            </li>
-                                                        </ul> -->
-                                                    </li>
-                                                    <li class="menu-item menu-item-has-children">
-                                                        <a href="#">
-                                                            Servicio Social
-                                                        </a>
-                                                        <!-- <ul class="submenu custom">
-                                                            <li class="menu-item">
-                                                                <a href="blog.html">
-                                                                    Informacion de Contacto
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="blog-left-sidebar.html">
-                                                                    Curriculum Vitae
-                                                                </a>
-                                                            </li>
-                                                        </ul> -->
-                                                    </li>
-                                                    <li class="menu-item menu-item-has-children">
-                                                        <a href="#">
-                                                            C.E
-                                                        </a>
-                                                        <!-- <ul class="submenu custom">
-                                                            <li class="menu-item">
-                                                                <a href="blog.html">
-                                                                    Informacion de Contacto
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="blog-left-sidebar.html">
-                                                                    Curriculum Vitae
-                                                                </a>
-                                                            </li>
-                                                        </ul> -->
-                                                    </li>
+                                                    
                                                     <!-- <li class="menu-item menu-item-has-children">
                                                         <a href="#">
                                                             Alumno
@@ -347,24 +302,24 @@
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#">
-                                                    Difusión
+                                                    Acerca de
                                                 </a>
                                                 <ul class="submenu custom">
                                                     <li class="menu-item">
                                                         <a href="booking.html">
-                                                            Noticias
+                                                            Visión
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="faqs.html">
-                                                            Eventos
+                                                            Misión
                                                         </a>
                                                     </li>
-                                                    <!-- <li class="menu-item">
+                                                    <li class="menu-item">
                                                         <a href="gallery.html">
-                                                            Conferencias
+                                                            Contactanos
                                                         </a>
-                                                    </li> -->
+                                                    </li>
                                                 </ul>
                                             </li>
                                         </ul>
