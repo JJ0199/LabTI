@@ -1,7 +1,12 @@
+body{
+    width: 100%;
+    height: auto;
+}
+
 .container_administrador{
     margin-top: 6rem;
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,7 +73,7 @@
     height: auto;
     flex-direction: column;
 
-    display: none;
+    display: flex;
 }
 
 .sidebar_alumnos div{
@@ -99,8 +104,9 @@
 /* ..........Estilos de container_derecha................... */
 .container_administrador .container_derecha{
    width: 82%;
-   height: 100vh;
+   height: auto !important;
    display: flex;
+   box-sizing: border-box;
 }
 
 /* ..........Estilos para <div class="container"> ...</div>................... */
@@ -112,16 +118,20 @@
 
 
 /* ....... Estilos para <div class="container investigador"> */
- .container_administrador .container_derecha .investigador{
+ /* .container_administrador .container_derecha .investigador{
     width: 100%;
     height: 100vh;
     display: flex;
 
  }
-
+ */
  .container_administrador .container_derecha .investigador{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+
+    display: flex;
  }
 
  .container_administrador .container_derecha .investigador .top{
@@ -145,6 +155,12 @@
     align-items: center;
 }
 
+.container_administrador .container_derecha .investigador .top .left .btn_invetigador{
+    background-color: red;
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
 
 .container_administrador .container_derecha .investigador .top .left .img{
     width: 3rem;
@@ -192,57 +208,68 @@
 
 /* ....Estilos para el bottom................... */
 .container_administrador .container_derecha .investigador .bottom{
-    width: 73%;
-    height: auto;
+    width: 100%;
+    height:fit-content;
     margin-top: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: .5rem;
 }
 
-.container_administrador .container_derecha .investigador .bottom .cards{
+/* .container_administrador .container_derecha .investigador .bottom .cards{
     display: flex;
     width: 60%;
-    padding: 1rem;
-    position: relative;
-    flex-direction: row;
-}
+    padding: .5rem;
+    background-color: aquamarine;
+   
 
-.container_administrador .container_derecha .investigador .bottom .cards .card{
+    flex-direction: row;
+} */
+
+.container_administrador .container_derecha .investigador .bottom .card{
     background-color: rgb(93, 173, 226);
-    width: 100%;
+    width: 30%;
     height: auto;
     border-radius: 10px;
-    padding: 30px;
+    padding: 10px;
     box-sizing: border-box;
     position: relative;
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
     transition: all 0.3s ease;
+
 
 /*     box-shadow: -1px 0 2px rgb(0,0,0.3),-2px 0 3px rgb(0,0,0.2);
  */}
 
- .container_administrador .container_derecha .investigador .bottom .cards .card:hover{
+ .container_administrador .container_derecha .investigador .bottom  .card:hover{
     background-color: rgb(133, 193, 233 );
     cursor: pointer;
     }
 
- .container_administrador .container_derecha .investigador .bottom .cards .card .header{
+ .container_administrador .container_derecha .investigador .bottom  .card .header{
     width: 100%;
     height: 60%;
     margin-bottom: 1rem;
    
 }
 
- .container_administrador .container_derecha .investigador .bottom .cards .card .header .img{
+ .container_administrador .container_derecha .investigador .bottom  .card .header .img{
    width: 100%;
    height: auto;
 }
 
-.container_administrador .container_derecha .investigador .bottom .cards .card .footer_card{
+.container_administrador .container_derecha .investigador .bottom  .card .footer_card{
     width: 100%;
     height: auto;
     font-weight: bold;
  }
 /* .......Fin de estilos para el bottom */
+
+/* .....Estilos del copyright...... */
+.copyright.end{
+    margin-top:auto;
+}
+/* .....Fin de estilos del copyright...... */
