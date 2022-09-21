@@ -1,8 +1,6 @@
  <?php
 session_start();
-if (isset($_SESSION['user'])) {
-   header('Location: inicio.php');
-}
+
 ?>
   <!DOCTYPE html>
 <html lang="es">
@@ -49,6 +47,9 @@ if (isset($_POST['submit'])) {
     $pass     = $_POST['pass'];
 
     $db->login($username,$pass);
+    if (isset($_SESSION['user'])) {
+        header('Location: home_administrador.php');
+     }
 
     /* $sql = "SELECT * FROM usuario";
     $con = $op->conexion();

@@ -1,8 +1,8 @@
 <?php
 session_start();
-if ($_SESSION['nombre']) {
+if ($_SESSION['user']) {
     session_destroy();
-    header('Location: http://localhost/mat/');
+    header('Location: index.php');
 } else {
-    header('Location: http://localhost/mat/');
+    header('Location: index.php');
 }
