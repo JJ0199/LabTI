@@ -1,14 +1,14 @@
 <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
 
     <div class="col align-self-center">
-        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img src="view/img/icono_lic_info.png" alt="" width="80" height="100" class="d-inline-block align-text-top">
+        <a href="http://www.labti.unca.edu.mx" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="view/img/icono_lic_info_v5.png" alt="" width="300" height="120" class="d-inline-block align-text-top">
             <!-- <span class="fs-4">  LabTic </span> -->
         </a>
     </div>
 
     <div class="col align-items-end">
-        <a>LabTic</a>
+      <!--   <a>LabTic</a> -->
     </div>
 
     <div class="col col-md-2"></div>
