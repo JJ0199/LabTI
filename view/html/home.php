@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <!-- Bootstrap -->
     <?php include("bootstrap_v5.php"); ?>
+
+    <!-- Para el menu -->
+    <script src="./js/desplegar_menu.js"></script>
+
+    <!--Iconos-->
+    <link rel="shortcut icon" href="./img/icono.png">
+
 </head>
 <body>
     <div class="container">
