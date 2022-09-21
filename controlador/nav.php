@@ -23,7 +23,7 @@
                             <div class="rightside full-height">
                                 <ul class="custom-flex full-height">
                                     <li class="book-appointment">
-                                        <a href="administrador/index.php">
+                                        <a href="controlador">
                                             Login
                                         </a>
                                     </li>

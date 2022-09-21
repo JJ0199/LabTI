@@ -13,6 +13,36 @@
             }
         }
         
+        public function login($email,$pass){
+            $consulta = "SELECT Id FROM Usuario WHERE Contraseña = '$pass'";
+            $respuestasql = $this->sql->query($consulta);
+            if($respuestasql->num_rows<=0){
+                echo "No se insertaron datos";
+            }else{
+                $respuesta = $respuestasql->fetch_array();
+                $idString = $respuesta[0];
+                $id = (int) $idString;
+
+                /* Una vez que comprobamos que el usuario se encuentra, consultamos si el correo que se ingresa
+                es la correcra */
+                $consultaCorreo = "SELECT Email FROM Información_personal WHERE Id = $id";
+                $correosql = $this->sql->query($consultaCorreo);
+                if($correosql->num_rows>0){
+
+                    $emailArray = $correosql->fetch_array();
+                    $email_usuario = $emailArray[0];
+                    $_SESSION['user']=$email_usuario;
+                    $_SESSION['id_user'] = $id;
+                    echo "El email del usuario es: ".$email_usuario;
+                }else{
+                   echo "La contraseña que ingresaste es incorrecta";
+                    
+                }
+                echo "El id del usuario es ".$respuesta[0];
+                
+            }
+        }
+
         public function insertar(){
             $consulta = "INSERT INTO Usuario VALUES (1,'Miguel Ángel','miguelangel')";
             $this->sql->query($consulta);
@@ -32,7 +62,7 @@
         }
 
 
-        public function login($username,$pass){
+        /* public function login($username,$pass){
             $consulta = "SELECT Id from usuario WHERE Contraseña = '$pass'";
             $respuestasql = $this->sql->query($consulta);
             $consulta = "SELECT * from informacion_personal where Email = '$username'";
@@ -51,7 +81,7 @@
                 echo "El correo, la contraseña o ambos son incorrectos";
             }
         }
-
+ */
         public function registrarUser($username,$apellido,$telefono,$email,$password,$ubicacion_foto){
 
             $consulta = "SELECT Id from usuario ORDER BY Id ASC LIMIT 1";

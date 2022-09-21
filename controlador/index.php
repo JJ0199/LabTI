@@ -1,7 +1,7 @@
  <?php
 session_start();
-if (isset($_SESSION['nombre'])) {
-    header('Location: http://localhost/mat/administrador/inicio.php');
+if (isset($_SESSION['user'])) {
+   header('Location: inicio.php');
 }
 ?>
   <!DOCTYPE html>
@@ -42,13 +42,15 @@ if (isset($_SESSION['nombre'])) {
 
      <?php
 if (isset($_POST['submit'])) {
-    require "../controlador/conexion.php";
+    require "../modelo/Conexion.php";
 
-    $op       = new BaseDeDatos();
+    $db       = new Conexion();
     $username = $_POST['mail'];
     $pass     = $_POST['pass'];
 
-    $sql = "SELECT * FROM usuario";
+    $db->login($username,$pass);
+
+    /* $sql = "SELECT * FROM usuario";
     $con = $op->conexion();
     $res = mysqli_query($con, $sql) or die('No se puede hacer una consulta');
 
@@ -66,7 +68,7 @@ if (isset($_POST['submit'])) {
         ?>
         <h4>!Contraseña o usuario incorrectos</h4>
         <?php
-}
+} */
 }
 ?>
 </body>
