@@ -1,8 +1,18 @@
 <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <?php 
+        $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+        if($link == "http://www.labti.unca.edu.mx/"){
+            $link_img = "view/img/icono_lic_info_v5.png";
+        }
+        if($link != "http://www.labti.unca.edu.mx/"){
+            $link_img = "..//img/icono_lic_info_v5.png";
+        }
+    ?>
+    
     <div class="col align-self-center">
         <a href="http://www.labti.unca.edu.mx" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img src="view/img/icono_lic_info_v5.png" alt="" width="300" height="120" class="d-inline-block align-text-top">
+            <img src=<?php echo $link_img;?> alt="" width="300" height="120" class="d-inline-block align-text-top">
             <!-- <span class="fs-4">  LabTic </span> -->
         </a>
     </div>
@@ -21,7 +31,7 @@
 
                         <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link " aria-current="page" href="http://www.labti.unca.edu.mx">Inicio</a>
                         </li>
 
                         <!-- áreas del laboratorio - lista desplegable -->
@@ -31,19 +41,23 @@
                             <!-- Lista de las areas del laboratorio -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dmenu">
                                 <li>
-                                    <a class="dropdown-item" href="#">Sistemas inteligentes y distribuidos</a>
+                                    <a class="dropdown-item" href="/view/html/Sistemas_inteligentes_y_distribuidos.php">Sistemas inteligentes y distribuidos</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Electronica</a>
+                                    <a class="dropdown-item" href="/view/html/Electronica.php">Electronica</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Investigación y desarrollo de software</a>
+                                    <a class="dropdown-item" href="/view/html/Investigación_y_desarrollo_de_software.php">Investigación y desarrollo de software</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Experiencia de usuario UX</a>
+                                    <a class="dropdown-item" href="/view/html/Experiencia_de_usuario_UX.php">Experiencia de usuario UX</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Redes</a>
+                                    <a class="dropdown-item" href="/view/html/Redes.php">Redes</a>
                                 </li>
                             </ul>
 
@@ -56,19 +70,23 @@
                             <!-- Lista de miembros -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Profesores investigadores</a>
+                                    <a class="dropdown-item" href="/view/html/Profesores_investigadores.php">Profesores investigadores</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Colaboradores</a>
+                                    <a class="dropdown-item" href="/view/html/Colaboradores.php">Colaboradores</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Servicio Social</a>
+                                    <a class="dropdown-item" href="/view/html/Servicio_Social.php">Servicio Social</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Estancias profesionales</a>
+                                    <a class="dropdown-item" href="/view/html/Estancias_profesionales.php">Estancias profesionales</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Alumni-Egresados</a>
+                                    <a class="dropdown-item" href="/view/html/Alumni_Egresados.php">Alumni-Egresados</a>
                                 </li>
                             </ul>
                         </li>
@@ -80,10 +98,11 @@
                             <!-- Lista investigación -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Proyectos</a>
+                                    <a class="dropdown-item" href="/view/html/Proyectos.php">Proyectos</a>
                                 </li>
+
                                 <li>
-                                    <a class="dropdown-item" href="#">Cuerpos académicos</a>
+                                    <a class="dropdown-item" href="/view/html/Cuerpos_académicos.php">Cuerpos académicos</a>
                                 </li>
                             </ul>
                             
@@ -96,18 +115,18 @@
                             <!-- Lista difusión -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Historia</a>
+                                    <a class="dropdown-item" href="/view/html/Historia.php">Historia</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Noticias</a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" href="#">Eventos</a>
+                                    <a class="dropdown-item" href="/view/html/Noticias.php">Noticias</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="#">Multimedia</a>
+                                    <a class="dropdown-item" href="/view/html/Eventos.php">Eventos</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="/view/html/Multimedia.php">Multimedia</a>
                                 </li>
                             </ul>
                         </li>
@@ -118,13 +137,13 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Misión</a>
+                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_mision">Misión</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Visión</a>
+                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_vision">Visión</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Contáctenos</a>
+                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_contactenos">Contáctenos</a>
                                 </li>
                             </ul>
 
