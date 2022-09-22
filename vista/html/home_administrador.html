@@ -62,37 +62,24 @@
 <?php include("nav_admin.php"); ?>
 <div class="container_administrador">
     <div class="sidebar">
-            <div class="usuario">Usuarios</div>
-            <div class="eventos">Eventos</div>
-            <div class="noticias">Noticias</div>
-            <div class="eventos_historicos">Eventos historicos</div>
+            <div class="usuario_right">Usuarios</div>
+            <div class="eventos_right">Eventos</div>
+            <div class="noticias_right">Noticias</div>
+            <div class="eventos_historicos_right">Eventos historicos</div>
     </div>
-    <div class="sidebar_alumnos">
-            <div>Investigador</div>
-            <div>Colaborador</div>
-            <div>Tesista</div>
-            <div>Servicio social</div>
-            <div>Estancias profesionales</div>
-            <div>Alumni</div>
+    <div class="sidebar_alumnos" id="sidebar_alumnos">
+            <div id="investigador" >Investigador</div>
+            <div id="colaborador">Colaborador</div>
+            <div id="tesista">Tesista</div>
+            <div id="serviciosocial">Servicio social</div>
+            <div id="ep">Estancias profesionales</div>
+            <div id="alumni">Alumni</div>
     </div>
-    <div class="container_derecha">
-        <!-- Mandamos a llamar el contenedor Investigador.php -->
-        <?php  require("Investigador.php");?>
-        <!-- Fin de llamada al contenedor Investigador.php -->
-        <div class="container colaborador"></div>
-        <div class="container tesista"></div>
-        <div class="container servicio_social"></div>
-        <div class="container estancias"></div>
-        <div class="container alumni"></div>
-        <div class="container evento"></div>
-        <div class="container noticia"></div>
-        <div class="container evento_historico"></div>
-    </div>
-
+ 
 </div>
         
         <!-- Agregamos el CopyRight -->
-        <div class="copyright end">
+        <!-- <div class="copyright end">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -104,15 +91,21 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Copyright -->
-        <div class="back-top" id="back-top">
+        <!-- <div class="back-top" id="back-top">
             <a href="#top">
                 <i class="flaticon-arrows">
                 </i>
             </a>
-        </div>
+        </div> -->
     
+        <!-- Agregue el Script de jquery para interactuar con elementos html con JavaScript
+    
+        
+        -->
+        <script src="../vista/js/jquery.js"></script>
+        <script src="../vista/js/administrador.js"> </script>
     </body>
     </html>
         <!-- Place all Scripts Here -->

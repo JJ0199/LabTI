@@ -95,7 +95,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item">
-                                                        <a href="blog-left-sidebar.html">
+                                                        <a href="Investigador.php">
                                                             Profesores Investigadores
                                                         </a>
                                                     </li>

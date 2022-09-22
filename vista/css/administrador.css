@@ -84,7 +84,21 @@ body{
  */    color: rgb(239, 246, 245);
     background-color:  rgb(127, 179, 213);
 
+    display: flex;
+
 }
+
+/* .sidebar_alumnos .sidebar_alumnos--primero{
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    border-radius: .2rem;
+    color: rgb(87, 91, 91);
+    background-color:  rgb(160, 202, 229);
+
+    display: flex;
+
+} */
 
 .sidebar_alumnos div:hover{
     cursor: pointer;
@@ -127,11 +141,12 @@ body{
  */
  .container_administrador .container_derecha .investigador{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
 
     display: flex;
+    border-bottom: 1rem;
  }
 
  .container_administrador .container_derecha .investigador .top{
@@ -141,7 +156,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
  }
 
  .container_administrador .container_derecha .investigador .top .left{
@@ -156,11 +170,36 @@ body{
 }
 
 .container_administrador .container_derecha .investigador .top .left .btn_invetigador{
-    background-color: red;
+    background-color: rgb(133, 193, 233);
     padding: .4rem .5rem;
     border-radius: .9rem;
 
 }
+
+.container_administrador .container_derecha .investigador .top .left .btn_invetigador:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .investigador .top .right > span{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .investigador .top .right > span:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
 
 .container_administrador .container_derecha .investigador .top .left .img{
     width: 3rem;
@@ -267,6 +306,520 @@ body{
     font-weight: bold;
  }
 /* .......Fin de estilos para el bottom */
+
+
+/* En esta sección se agregan los estilos para la sección de los colaboradores */
+.container_administrador .container_derecha .colaborador{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    display: none;
+    border-bottom: 1rem;
+ }
+
+ .container_administrador .container_derecha .colaborador .top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .container_administrador .container_derecha .colaborador .top .left{
+    width:fit-content;
+    height: auto;
+    box-sizing: border-box;
+    padding: .3rem;
+    display: flex;
+    flex-direction: row;
+    gap:.3rem;
+    align-items: center;
+}
+
+.container_administrador .container_derecha .colaborador .top .left .btn_invetigador{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .colaborador .top .left .btn_invetigador:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .colaborador .top .right > span{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .colaborador .top .right > span:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .colaborador .top .left .img{
+    width: 3rem;
+    height: auto;
+}
+
+.container_administrador .container_derecha .colaborador .top .left .img img{
+    width: 100%;
+    height: auto;
+}
+
+.container_administrador .container_derecha .colaborador .top .right{
+    width:fit-content;
+    height: auto;
+    box-sizing: border-box;
+    padding: .3rem;
+    display: flex;
+    flex-direction: row;
+    gap:.3rem;
+    align-items: center;
+}
+
+.container_administrador .container_derecha .colaborador .top .right .img{
+    width: 3rem;
+    height: auto;
+}
+
+.container_administrador .container_derecha .colaborador .top .right .img img{
+    width: 100%;
+    height: auto;
+}
+
+.container_administrador .container_derecha .colaborador .top .right input{
+    width: 3rem;
+    height: auto;
+    outline: none;
+    border: solid 1px rgba(127, 179, 213,.5);;
+}
+
+
+/* ..........Fin de estilos para <div class="container colaborador"> ...</div>................... */
+
+
+/* ..........Fin de estilos de container_derecha................... */
+
+/* ....Estilos para el bottom................... */
+.container_administrador .container_derecha .colaborador .bottom{
+    width: 100%;
+    height:fit-content;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+/* .container_administrador .container_derecha .colaborador .bottom .cards{
+    display: flex;
+    width: 60%;
+    padding: .5rem;
+    background-color: aquamarine;
+   
+
+    flex-direction: row;
+} */
+
+.container_administrador .container_derecha .colaborador .bottom .card{
+    background-color: rgb(93, 173, 226);
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+
+/*     box-shadow: -1px 0 2px rgb(0,0,0.3),-2px 0 3px rgb(0,0,0.2);
+ */}
+
+ .container_administrador .container_derecha .colaborador .bottom  .card:hover{
+    background-color: rgb(133, 193, 233 );
+    cursor: pointer;
+    }
+
+ .container_administrador .container_derecha .colaborador .bottom  .card .header{
+    width: 100%;
+    height: 60%;
+    margin-bottom: 1rem;
+   
+}
+
+ .container_administrador .container_derecha .colaborador .bottom  .card .header .img{
+   width: 100%;
+   height: auto;
+}
+
+.container_administrador .container_derecha .colaborador .bottom  .card .footer_card{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+ }
+/* .......Fin de estilos para el bottom */
+
+/* Finalizan los estilos para la sección de los colaboradores */
+
+
+/* En esta sección se colocan los estilos para la sección de los tesista */
+.container_administrador .container_derecha .tesista{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    display: none;
+    border-bottom: 1rem;
+ }
+
+ .container_administrador .container_derecha .tesista .top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .container_administrador .container_derecha .tesista .top .left{
+    width:fit-content;
+    height: auto;
+    box-sizing: border-box;
+    padding: .3rem;
+    display: flex;
+    flex-direction: row;
+    gap:.3rem;
+    align-items: center;
+}
+
+.container_administrador .container_derecha .tesista .top .left .btn_invetigador{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .tesista .top .left .btn_invetigador:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .tesista .top .right > span{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .tesista .top .right > span:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .tesista .top .left .img{
+    width: 3rem;
+    height: auto;
+}
+
+.container_administrador .container_derecha .tesista .top .left .img img{
+    width: 100%;
+    height: auto;
+}
+
+.container_administrador .container_derecha .tesista .top .right{
+    width:fit-content;
+    height: auto;
+    box-sizing: border-box;
+    padding: .3rem;
+    display: flex;
+    flex-direction: row;
+    gap:.3rem;
+    align-items: center;
+}
+
+.container_administrador .container_derecha .tesista .top .right .img{
+    width: 3rem;
+    height: auto;
+}
+
+.container_administrador .container_derecha .tesista .top .right .img img{
+    width: 100%;
+    height: auto;
+}
+
+.container_administrador .container_derecha .tesista .top .right input{
+    width: 3rem;
+    height: auto;
+    outline: none;
+    border: solid 1px rgba(127, 179, 213,.5);;
+}
+
+
+/* ..........Fin de estilos para <div class="container tesista"> ...</div>................... */
+
+
+/* ..........Fin de estilos de container_derecha................... */
+
+/* ....Estilos para el bottom................... */
+.container_administrador .container_derecha .tesista .bottom{
+    width: 100%;
+    height:fit-content;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+/* .container_administrador .container_derecha .tesista .bottom .cards{
+    display: flex;
+    width: 60%;
+    padding: .5rem;
+    background-color: aquamarine;
+   
+
+    flex-direction: row;
+} */
+
+.container_administrador .container_derecha .tesista .bottom .card{
+    background-color: rgb(93, 173, 226);
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+
+/*     box-shadow: -1px 0 2px rgb(0,0,0.3),-2px 0 3px rgb(0,0,0.2);
+ */}
+
+ .container_administrador .container_derecha .tesista .bottom  .card:hover{
+    background-color: rgb(133, 193, 233 );
+    cursor: pointer;
+    }
+
+ .container_administrador .container_derecha .tesista .bottom  .card .header{
+    width: 100%;
+    height: 60%;
+    margin-bottom: 1rem;
+   
+}
+
+ .container_administrador .container_derecha .tesista .bottom  .card .header .img{
+   width: 100%;
+   height: auto;
+}
+
+.container_administrador .container_derecha .tesista .bottom  .card .footer_card{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+ }
+/* .......Fin de estilos para el bottom */
+/* Finalizan los estilos para la sección de los tesista */
+
+
+/* En esta sección se encuentran los estilos para la sección de los evento */
+.container_administrador .container_derecha .evento{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    display: none;
+    border-bottom: 1rem;
+ }
+
+ .container_administrador .container_derecha .evento .top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .container_administrador .container_derecha .evento .top .left{
+    width:fit-content;
+    height: auto;
+    box-sizing: border-box;
+    padding: .3rem;
+    display: flex;
+    flex-direction: row;
+    gap:.3rem;
+    align-items: center;
+}
+
+.container_administrador .container_derecha .evento .top .left .btn_invetigador{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .evento .top .left .btn_invetigador:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .evento .top .right > span{
+    background-color: rgb(133, 193, 233);
+    padding: .4rem .5rem;
+    border-radius: .9rem;
+
+}
+
+.container_administrador .container_derecha .evento .top .right > span:hover{
+    background-color: rgb(114, 179, 222);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+
+}
+
+
+.container_administrador .container_derecha .evento .top .left .img{
+    width: 3rem;
+    height: auto;
+}
+
+.container_administrador .container_derecha .evento .top .left .img img{
+    width: 100%;
+    height: auto;
+}
+
+.container_administrador .container_derecha .evento .top .right{
+    width:fit-content;
+    height: auto;
+    box-sizing: border-box;
+    padding: .3rem;
+    display: flex;
+    flex-direction: row;
+    gap:.3rem;
+    align-items: center;
+}
+
+.container_administrador .container_derecha .evento .top .right .img{
+    width: 3rem;
+    height: auto;
+}
+
+.container_administrador .container_derecha .evento .top .right .img img{
+    width: 100%;
+    height: auto;
+}
+
+.container_administrador .container_derecha .evento .top .right input{
+    width: 3rem;
+    height: auto;
+    outline: none;
+    border: solid 1px rgba(127, 179, 213,.5);;
+}
+
+
+/* ..........Fin de estilos para <div class="container evento"> ...</div>................... */
+
+
+/* ..........Fin de estilos de container_derecha................... */
+
+/* ....Estilos para el bottom................... */
+.container_administrador .container_derecha .evento .bottom{
+    width: 100%;
+    height:fit-content;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+/* .container_administrador .container_derecha .evento .bottom .cards{
+    display: flex;
+    width: 60%;
+    padding: .5rem;
+    background-color: aquamarine;
+   
+
+    flex-direction: row;
+} */
+
+.container_administrador .container_derecha .evento .bottom .card{
+    background-color: rgb(93, 173, 226);
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+
+/*     box-shadow: -1px 0 2px rgb(0,0,0.3),-2px 0 3px rgb(0,0,0.2);
+ */}
+
+ .container_administrador .container_derecha .evento .bottom  .card:hover{
+    background-color: rgb(133, 193, 233 );
+    cursor: pointer;
+    }
+
+ .container_administrador .container_derecha .evento .bottom  .card .header{
+    width: 100%;
+    height: 60%;
+    margin-bottom: 1rem;
+   
+}
+
+ .container_administrador .container_derecha .evento .bottom  .card .header .img{
+   width: 100%;
+   height: auto;
+}
+
+.container_administrador .container_derecha .evento .bottom  .card .footer_card{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+ }
+/* .......Fin de estilos para el bottom */
+/* Finalizan los estilos para la sección de evento */
 
 /* .....Estilos del copyright...... */
 .copyright.end{

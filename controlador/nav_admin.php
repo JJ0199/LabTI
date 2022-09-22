@@ -24,8 +24,8 @@
                             <div class="rightside full-height">
                                 <ul class="custom-flex full-height">
                                     <li class="book-appointment">
-                                        <a href="controlador">
-                                            Login
+                                        <a href="close.php">
+                                            Serrar sesión
                                         </a>
                                     </li>
                                 </ul>
@@ -46,7 +46,7 @@
                                             </img>
                                         </a>
                                     </div>
-                                    <div class="main-menu">
+                                    <div class="main-menu menu_principal">
                                         <ul class="custom-flex">
                                             <li class="menu-item active">
                                                 <a href="inicio.php">
@@ -58,6 +58,11 @@
                                                     Laboratorio
                                                 </a>
                                                 <ul class="submenu custom">
+                                                <li class="menu-item">
+                                                        <a href="#gallery">
+                                                        Investigación y desarrollo de software
+                                                        </a>
+                                                    </li>
                                                     <li class="menu-item">
                                                         <a href="#vision">
                                                             Sistemas inteligentes y distribuidos
@@ -75,7 +80,7 @@
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="#gallery">
-                                                            Experiencia de usuario
+                                                            Experiencia de usuario (UX)
                                                         </a>
                                                     </li>
                                                     <!-- <li class="menu-item">
@@ -90,13 +95,9 @@
                                                     Miembros
                                                 </a>
                                                 <ul class="submenu custom">
+        
                                                     <li class="menu-item">
-                                                        <a href="blog.html">
-                                                            Sistemas Inteligentes y Distribuidos
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="blog-left-sidebar.html">
+                                                        <a href="investigador.php">
                                                             Profesores Investigadores
                                                         </a>
                                                     </li>
