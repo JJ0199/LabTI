@@ -1,4 +1,4 @@
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
     <?php 
         $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -24,7 +24,7 @@
     <div class="col col-md-2"></div>
 
     <div class="col align-self-end">
-        <nav class="nav nav-pills navbar-expand-lg navbar-light ">
+        <nav class="nav nav-pills navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
