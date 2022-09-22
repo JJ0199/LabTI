@@ -2,10 +2,10 @@
     <?php 
         $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-        if($link == "http://www.labti.unca.edu.mx/"){
+        if($link == "http://www.labtiunca.edu.mx/"){
             $link_img = "view/img/icono_lic_info_v5.png";
         }
-        if($link != "http://www.labti.unca.edu.mx/"){
+        if($link != "http://www.labtiunca.edu.mx/"){
             $link_img = "..//img/icono_lic_info_v5.png";
         }
     ?>
@@ -26,12 +26,12 @@
     <div class="col align-self-end">
         <nav class="nav nav-pills navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent items_en_uso">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="http://www.labti.unca.edu.mx">Inicio</a>
+                            <a class="nav-link " aria-current="page" href="http://www.labtiunca.edu.mx">Inicio</a>
                         </li>
 
                         <!-- áreas del laboratorio - lista desplegable -->

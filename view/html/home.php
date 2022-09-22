@@ -10,7 +10,7 @@
     <?php include("bootstrap_v5.php"); ?>
 
     <!-- Para el menu -->
-    <script src="./js/desplegar_menu.js"></script>
+    <script src="view/js/desplegar_menu.js"></script>
 
     <!--Iconos-->
     <link rel="shortcut icon" href="view/img/icono_lic_info.png">
@@ -25,65 +25,121 @@
     </div>
 
     <main>
-        <div id="carousel_labti" class="carousel slide pointer-event" data-bs-ride="carousel">
-        
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-                <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="1" class="" aria-label="Slide 2" ></button>
-                <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="2" class="" aria-label="Slide 3"></button>
+        <!-- Carousel -->
+        <div class="container">
+            <div id="carousel_labti" class="carousel slide pointer-event" data-bs-ride="carousel">
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="1" class="" aria-label="Slide 2" ></button>
+                    <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="2" class="" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="3" class="" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carousel_labti" data-bs-slide-to="4" class="" aria-label="Slide 5"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="view/img/Diapositiva1.png" class="d-block w-100" alt="...">
+
+                        <div class="container">  <!-- checar -->
+                            <div class="carousel-caption text-end">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
+                                <h1>Sistemas inteligentes y distribuidos </h1>  <!-- h5 checar -->
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="view/img/Diapositiva2.png" class="d-block w-100" alt="...">
+
+                        <div class="container">  <!-- checar -->
+                            <div class="carousel-caption  text-end">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
+                                <h1>Electronica.</h1>  <!-- h5 checar -->
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="view/img/Diapositiva3.png" class="d-block w-100" alt="...">
+
+                        <div class="container">  <!-- checar -->
+                            <div class="carousel-caption text-end">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
+                                <h1>Investigación y desarrollo de software.</h1>  <!-- h5 checar -->
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="view/img/Diapositiva3.png" class="d-block w-100" alt="...">
+
+                        <div class="container">  <!-- checar -->
+                            <div class="carousel-caption text-end">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
+                                <h1>Experiencia de usuario UX.</h1>  <!-- h5 checar -->
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="view/img/Diapositiva3.png" class="d-block w-100" alt="...">
+
+                        <div class="container">  <!-- checar -->
+                            <div class="carousel-caption text-end">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
+                                <h1>Redes.</h1>  <!-- h5 checar -->
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_labti" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel_labti" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="view/img/Diapositiva1.png" class="d-block w-100" alt="...">
-
-                    <div class="container">  <!-- checar -->
-                        <div class="carousel-caption ">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
-                            <h1>Example headline.</h1>  <!-- h5 checar -->
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="view/img/Diapositiva2.png" class="d-block w-100" alt="...">
-
-                    <div class="container">  <!-- checar -->
-                        <div class="carousel-caption ">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
-                            <h1>Example headline.</h1>  <!-- h5 checar -->
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="view/img/Diapositiva3.png" class="d-block w-100" alt="...">
-
-                    <div class="container">  <!-- checar -->
-                        <div class="carousel-caption ">  <!-- v1 text-start || vacio centra ||text-end -->  <!-- v2 d-none d-md-block  -->
-                            <h1>Example headline.</h1>  <!-- h5 checar -->
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>  <!-- checar -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_labti" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-            
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel_labti" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-            </button>
-
         </div>
+
+        <!-- Espacio -->
+        <div class="container">
+            <div class="mt-5"></div>
+        </div>
+        
+        <!-- Video -->
+        <div class="container">
+           <div class="ratio ratio-16x9">
+                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FInformaticaUNCA%2Fvideos%2F582433396653906%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Espacio -->
+        <div class="container">
+            <div class="mt-5"></div>
+        </div>
+
+        <!-- Tesis y proyectos -->
+        <div class="container">
+            <div class="mt-5"></div>
+        </div> 
+        
+        <!-- Espacio -->
+        <div class="container">
+            <div class="mt-5"></div>
+        </div>
+        
     </main>
     <?php include("footer.php"); ?>
 </body>

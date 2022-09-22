@@ -10,7 +10,7 @@
     <?php include("bootstrap_v5.php"); ?>
 
     <!-- Para el menu -->
-    <script src="./js/desplegar_menu.js"></script>
+    <script src="view/js/desplegar_menu.js"></script>
 
     <!--Iconos-->
     <link rel="shortcut icon" href="view/img/icono_lic_info.png">
