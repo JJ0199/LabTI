@@ -1,12 +1,12 @@
 <?php 
     class Area{
-        public $id;
-        public $nombre;
-        public $acronimo;
-        public $objetivo;
+        private $id;
+        private $nombre;
+        private $acronimo;
+        private $objetivo;
 
         public function __construct(){
-            $this->id = "";
+            $this->id = 0;
             $this->nombre = "";
             $this->acronimo = "";
             $this->objetivo = "";

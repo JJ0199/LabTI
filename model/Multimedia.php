@@ -1,13 +1,13 @@
 <?php
     class Multimedia{
-        public $id;
-        public $titulo;
-        public $descripcion;
-        public $nombreArchivo;
-        public $fecha;
+        private $id;
+        private $titulo;
+        private $descripcion;
+        private $nombreArchivo;
+        private $fecha;
 
         public function __construct(){
-            $this->id = "";
+            $this->id = 0;
             $this->titulo = "";
             $this->descripcion = "";
             $this->nombreArchivo = "";

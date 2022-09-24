@@ -1,10 +1,10 @@
 <?php
     class Noticia{
-        public $id;
-        public $titulo;
-        public $fecha;
-        public $entrada;
-        public $cuerpo;
+        private $id;
+        private $titulo;
+        private $fecha;
+        private $entrada;
+        private $cuerpo;
 
         public function __construct(){
             $this->id = "";

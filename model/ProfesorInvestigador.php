@@ -1,6 +1,6 @@
 <?php 
     require_once("Usuario.php");
-    class Profesor_investigador extends Usuario{
+    class ProfesorInvestigador extends Usuario{
         public $gradoActual;
 
         public function __construct(){

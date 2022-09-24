@@ -1,15 +1,15 @@
 <?php 
     class Eventos{
-        public $id;
-        public $nombreEvento;
-        public $descripcion;
-        public $telefono;
-        public $email;
-        public $hipervinculo;
-        public $fecha;
+        private $id;
+        private $nombreEvento;
+        private $descripcion;
+        private $telefono;
+        private $email;
+        private $hipervinculo;
+        private $fecha;
 
         public function __construct() {
-            $this->id ="";
+            $this->id = 1;
             $this->nombreEvento ="";
             $this->descripcion = "";
             $this->email ="";

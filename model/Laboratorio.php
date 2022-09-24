@@ -1,15 +1,15 @@
 <?php
     class Laboratorio{
-        public $id;
-        public $nombre;
-        public $email;
-        public $telefono;
-        public $direccion;
-        public $mision;
-        public $vision;
+        private $id;
+        private $nombre;
+        private $email;
+        private $telefono;
+        private $direccion;
+        private $mision;
+        private $vision;
 
         public function __construct(){
-            $this->id = "";
+            $this->id = 0;
             $this->nombre = "";
             $this->email = "";
             $this->telefono = "";
