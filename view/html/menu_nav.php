@@ -11,7 +11,7 @@
     ?>
     
     <div class="col align-self-center">
-        <a href="http://www.labti.unca.edu.mx" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <a href="http://www.labtiunca.edu.mx" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <img src=<?php echo $link_img;?> alt="" width="300" height="120" class="d-inline-block align-text-top">
             <!-- <span class="fs-4">  LabTic </span> -->
         </a>

@@ -464,7 +464,7 @@ CREATE TABLE Formación_académica(
     Institución INT,
     Fecha_inicio DATE NOT NULL, 
     Fecha_fin DATE NOT NULL,
-    PRIMARY KEY(Id),
+    PRIMARY KEY(Id), 
     FOREIGN KEY(Institución) REFERENCES Lista_ues(Id)
 );
 
@@ -479,8 +479,8 @@ CREATE TABLE Formación_acad_Usuario(
 CREATE TABLE Distinción_académica(
     Id INT AUTO_INCREMENT, 
     Distinción VARCHAR(255) NOT NULL, 
-    Otorgada VARCHAR(255) NOT NULL, 
-    fecha_inicio DATE, 
+    Institución VARCHAR(255) NOT NULL, 
+    Fecha_inicio DATE, 
     Fecha_fin DATE,
     PRIMARY KEY(Id)
 );
