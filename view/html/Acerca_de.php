@@ -1,3 +1,11 @@
+<?php
+    include("..//..//model/BaseDatos.php");
+    include("..//..//model/Laboratorio.php");
+
+    $bd = new BaseDatos();
+    $laboratorio = $bd->datos_lab();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +16,6 @@
 
     <!-- Bootstrap -->
     <?php include("bootstrap_v5.php"); ?>
-
-    <!-- Para el menu -->
-    <!-- <script src="view/js/desplegar_menu.js"></script> -->
 
     <!--Iconos-->
     <link rel="shortcut icon" href="..//img/icono_lic_info.png">
@@ -23,150 +28,87 @@
 
     <main>
         
-            <!-- Espacio -->
-        <div class="container">
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
-        </div>
-
-        <div class="container">
-            <H1>sjcnisc</H1>
-            <?php echo $link ?>
-            <p>Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.</p>
-        </div>
-
-        <div id="id_mision" class="container">
-            <a>Mision</a>
-            <p>Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto
-            Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto..</p>
-        </div>
-
         <!-- Espacio -->
         <div class="container">
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
-        </div>
-
-        <div id="id_vision" class="container">
-            <a>Vision</a>
-            <p>Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            Maro Muchi, artista del manga de comedia Seitokai ni mo Ana wa Aru! (There Is Also a Hole in the Student Organization!), compartió una ilustración erótica en Twitter que se volvió inmediatamente viral, aunque por las razones equivocadas. Resulta que su ilustración atrajo la atención del colectivo feminista en redes sociales, quienes inmediatamente comenzaron a atacarlo.
-
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.</p>
-
-        </div>
-
-        <!-- Espacio -->
-        <div class="container">
-            <div class="mt-5"></div>
-            <hr>
-            <div class="mt-5"></div>
-        </div>
-
-
-        <!-- Desarrolladores -->
-        <div id="des" class="container">
-
-            <h1>Desarrolladores</h1>
             <br>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-
-                <!-- Miembro -->
-                <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="..//img/maria_peralta_calvo.jpg" class="card-img-top" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Miembro -->
-                <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="..//img/icono_lic_info.png" class="card-img-top" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
         </div>
 
+        <!-- ¿Que es LabTI? -->
+        <div class="container" id="id_queeslabti">
+            <h2>¿Que es LabTI?</h2>
+            <?php
+                printf('<p>%s</p>', $laboratorio->getDefinicion());
+            ?>
+        </div>
 
         <!-- Espacio -->
         <div class="container">
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
+            <br>
         </div>
 
+        <!-- Misión -->
+        <div id="id_mision" class="container">
+            <h2>Misión</h2>
+            <?php
+                printf('<p>%s</p>', $laboratorio->getMision());
+            ?>
+        </div>
+
+       <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+ 
+        <!-- Vision -->
+        <div id="id_vision" class="container">
+            <h2>Visión</h2>
+            <?php
+                printf('<p>%s</p>', $laboratorio->getVision());
+            ?>
+        </div>
+
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+
+        <!-- Información de contacto -->
         <div id="id_contactenos" class="container">
-            <a>Contáctenos</a>
-            <p>
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-            El autor escribió: «La profesora de Ume-kun que hurga en la nevera a altas horas de la noche en busca de comida que no haya caducado», pero cabe mencionar que, de acuerdo con su descripción oficial en el manga, es una persona que va a casa, come y se masturba frecuentemente. Por otra parte, en la ilustración se puede ver a la profesora hurgando en la nevera con el sostén abierto.
-
-            </p>
+            <h2>Información de contacto</h2>
+            <br>
+            <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <h5>Teléfono</h5>
+                            <?php
+                                printf('<p>%s</p>', $laboratorio->getTelefono());
+                            ?>
+                        </div>
+                        <div class="col-4">
+                            <h5>Correo</h5>
+                            <?php
+                                printf('<p>%s</p>', $laboratorio->getEmail());
+                            ?>
+                        </div>
+                        <div class="col-4">
+                            <h5>Dirección</h5>
+                            <?php
+                                printf('<p>%s</p>', $laboratorio->getDireccion());
+                            ?>
+                        </div>
+                    </div>
+            </div>
         </div>
 
         <!-- Espacio -->
         <div class="container">
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
-            <div class="mt-5"></div>
+            <br>
         </div>
         
         <!-- Mapa -->
         <div id="lab_ubic" class="container">
-            <h1>Ubicación</h1>
+            <h2>Ubicación</h2>
+            <br>
             <div class="ratio ratio-16x9">
                 <iframe src="https://www.google.com/maps/embed?pb=!4v1663875153084!6m8!1m7!1sw5TiNt1fY9mSNBinB1_XEA!2m2!1d18.13510447379684!2d-97.09705874914933!3f71.45409423395809!4f-26.282944461073562!5f1.1924812503605782" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

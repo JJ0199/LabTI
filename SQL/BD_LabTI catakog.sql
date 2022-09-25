@@ -214,6 +214,14 @@ CREATE TABLE Profesor_investigador(
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id)
 );
 
+CREATE Table Multimedia_Profesor_investigador(
+    Id_multimedia INT,
+    Id_profesor_investigador INT,
+    PRIMARY KEY(Id_multimedia, Id_profesor_investigador),
+    FOREIGN KEY(Id_multimedia) REFERENCES Multimedia(Id),
+    FOREIGN KEY(Id_profesor_investigador) REFERENCES Profesor_investigador(Id_usuario)
+);
+
 
 CREATE TABLE Laboratorio(
     Id INT AUTO_INCREMENT,
@@ -260,6 +268,14 @@ CREATE TABLE Proyecto(
     PRIMARY KEY (Id),
     FOREIGN KEY(Id_profesor_invg) REFERENCES Profesor_investigador(Id_usuario),
     FOREIGN KEY(Estatus) REFERENCES Proyecto_estado(Id)
+);
+
+CREATE TABLE Multimedia_Proyecto(
+    Id_multimedia INT,
+    Id_proyecto INT,
+    PRIMARY KEY (Id_multimedia, Id_proyecto),
+    FOREIGN KEY (Id_multimedia) REFERENCES Multimedia(Id),
+    FOREIGN KEY (Id_proyecto) REFERENCES Proyecto(Id)
 );
 
 CREATE TABLE Cuerpo_académico(

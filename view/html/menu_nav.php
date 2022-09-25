@@ -137,13 +137,19 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
+                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_queeslabti">¿Que es LabTI?</a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="/view/html/Acerca_de.php#id_mision">Misión</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/view/html/Acerca_de.php#id_vision">Visión</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_contactenos">Contáctenos</a>
+                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_contactenos">Contacto</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/view/html/Desarrolladores.php">Desarrolladores</a>
                                 </li>
                             </ul>
 

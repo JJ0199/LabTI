@@ -7,6 +7,7 @@
         private $direccion;
         private $mision;
         private $vision;
+        private $definicion;
 
         public function __construct(){
             $this->id = 0;
@@ -16,6 +17,7 @@
             $this->direccion = "";
             $this->mision = "";
             $this->vision = "";
+            $this->definicion = "";
         }
 
         public function setId($id){$this->id = $id;}
@@ -28,15 +30,18 @@
         public function getEmail(){return $this->email;}
 
         public function setTelefono($telefono){$this->telefono = $telefono;}
-        public function getTelefono(){return ->telefono;}
+        public function getTelefono(){return $this->telefono;}
 
         public function setDireccion($direccion){$this->direccion = $direccion;}
-        public function getDireccion(){return ->direccion;}
+        public function getDireccion(){return $this->direccion;}
 
         public function setMision($mision){$this->mision = $mision;}
-        public function getMision(){return ->mision;}
+        public function getMision(){return $this->mision;}
 
         public function setVision($vision){$this->vision = $vision;}
-        public function getVision(){return ->vision;}
+        public function getVision(){return $this->vision;}
+
+        public function setDefinicion($definicion){$this->definicion = $definicion;}
+        public function getDefinicion(){return  $this->definicion;}
     }
 ?>
