@@ -1,5 +1,5 @@
 <?php 
-    class Informacion_personal{
+    class Informacionpersonal{
         private $id;
         private $nombre;
         private $apellido;
