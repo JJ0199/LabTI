@@ -34,11 +34,9 @@
                             <div class="col-md-4">
                                 <img src="..//img/maria_peralta_calvo.jpg" class="card-img-top" alt="...">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 align-self-center">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <h2 class="card-title">M.C.Maria del Rosario Peralta Calvo</h2>
                                 </div>
                             </div>
                         </div>
@@ -50,13 +48,44 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="..//img/icono_lic_info.png" class="card-img-top" alt="...">
+                                <img src="..//img/isra.png" class="card-img-top" alt="...">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 align-self-center">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <h2 class="card-title">Israel Reyes</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro -->
+                <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="..//img/ca.png" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h2 class="card-title">Carlos Serano Martines</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Miembro -->
+                <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="..//img/ro.png" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h2 class="card-title">Josue Rómulo Gomez Justo</h2>
                                 </div>
                             </div>
                         </div>
