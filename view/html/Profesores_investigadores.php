@@ -67,8 +67,7 @@
                                     <div class="col-md-8 align-self-center">
                                         <div class="card-body">');
                                     printf('<h3 class="card-title"> %s %s</h4>',$Infpf->getNombre(),$Infpf->getApellido());
-                                    /* print('<h6 class="card-subtitle mb-2 text-muted">Maestra en Ciencias Computacionales</h6>'); */
-                        printf('<a href="#" class="card-link">Ver C.V.</a>');
+                        printf('<a href="/view/html/curriculum.php?user=%s" class="card-link">Ver C.V.</a>',$Infpf->getEmail());
             printf('</div>
             </div>
         </div>

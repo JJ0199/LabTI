@@ -6,7 +6,7 @@
             $link_img = "view/img/icono_lic_info_v5.png";
         }
         if($link != "http://www.labtiunca.edu.mx/"){
-            $link_img = "..//img/icono_lic_info_v5.png";
+            $link_img = "view/img/icono_lic_info_v5.png";
         }
     ?>
     
