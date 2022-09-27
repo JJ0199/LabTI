@@ -1,15 +1,11 @@
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
-    <?php 
-        $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-        if($link == "http://www.labtiunca.edu.mx/"){
-            $link_img = "view/img/icono_lic_info_v5.png";
-        }
-        if($link != "http://www.labtiunca.edu.mx/"){
-            $link_img = "view/img/icono_lic_info_v5.png";
-        }
-    ?>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <?php
     
+    $link_img = "/view/img/icono_lic_info_v5.png";
+
+    ?>
+    <!-- Icono -->
     <div class="col align-self-center">
         <a href="http://www.labtiunca.edu.mx" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <img src=<?php echo $link_img;?> alt="" width="300" height="120" class="d-inline-block align-text-top">
@@ -26,12 +22,12 @@
     <div class="col align-self-end">
         <nav class="nav nav-pills navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent items_en_uso">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="http://www.labtiunca.edu.mx">Inicio</a>
+                            <a class="nav-link " aria-current="page" href="http://www.labtiunca.edu.mx">LabTI</a>
                         </li>
 
                         <!-- áreas del laboratorio - lista desplegable -->
@@ -41,23 +37,23 @@
                             <!-- Lista de las areas del laboratorio -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dmenu">
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Sistemas_inteligentes_y_distribuidos.php">Sistemas inteligentes y distribuidos</a>
+                                    <a class="dropdown-item" href="/view/html/Areas.php?area=1">Sistemas inteligentes y distribuidos</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Electronica.php">Electronica</a>
+                                    <a class="dropdown-item" href="/view/html/Areas.php?area=2">Electronica</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Investigación_y_desarrollo_de_software.php">Investigación y desarrollo de software</a>
+                                    <a class="dropdown-item" href="/view/html/Areas.php?area=3">Investigación y desarrollo de software</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Experiencia_de_usuario_UX.php">Experiencia de usuario UX</a>
+                                    <a class="dropdown-item" href="/view/html/Areas.php?area=4">Experiencia de usuario UX</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Redes.php">Redes</a>
+                                    <a class="dropdown-item" href="/view/html/Areas.php?area=5">Redes</a>
                                 </li>
                             </ul>
 
@@ -70,23 +66,23 @@
                             <!-- Lista de miembros -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Profesores_investigadores.php">Profesores investigadores</a>
+                                    <a class="dropdown-item" href="/view/html/Miembros.php?miembro=1">Profesores investigadores</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Colaboradores.php">Colaboradores</a>
+                                    <a class="dropdown-item" href="/view/html/Miembros.php?miembro=2">Colaboradores</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Servicio_Social.php">Servicio Social</a>
+                                    <a class="dropdown-item" href="/view/html/Miembros.php?miembro=3">Servicio Social</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Estancias_profesionales.php">Estancias profesionales</a>
+                                    <a class="dropdown-item" href="/view/html/Miembros.php?miembro=4">Estancias profesionales</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Alumni_Egresados.php">Alumni-Egresados</a>
+                                    <a class="dropdown-item" href="/view/html/Miembros.php?miembro=5">Alumni-Egresados</a>
                                 </li>
                             </ul>
                         </li>
@@ -136,15 +132,6 @@
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" role="button">Acerca de</a>
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_queeslabti">¿Que es LabTI?</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_mision">Misión</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/view/html/Acerca_de.php#id_vision">Visión</a>
-                                </li>
                                 <li>
                                     <a class="dropdown-item" href="/view/html/Acerca_de.php#id_contactenos">Contacto</a>
                                 </li>

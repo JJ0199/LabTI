@@ -2,13 +2,29 @@
     include("..//..//model/BaseDatos.php");
     include("..//..//model/Informacionpersonal.php");
     include("..//..//model/Multimedia.php");
-    include("..//..//model/Area.php");
 
+    $miembro = $_GET["miembro"];
     $bd = new BaseDatos();
-    $area = 1;
-    $list_inf = $bd->lista_areas($area);
-    $areaLab = $bd->info_area($area);
-
+    if($miembro == 1){ 
+        $list_inf = $bd->lista_pfi();
+        $nmiembro = "Profesores Investigadores";
+     } /* profesores investigadores */
+    if($miembro == 2){ 
+        $list_inf = $bd->lista_colab(); 
+        $nmiembro = "Colaboradores externos";
+    } /* colaboradores */
+    if($miembro == 3){ 
+        $list_inf = $bd->lista_serv();
+        $nmiembro = "Servicio Social";
+    } /* servicio social */
+    if($miembro == 4){ 
+        $list_inf = $bd->lista_estp();
+        $nmiembro = "Estancias profesionales"; 
+    } /* Estancias profesionales */
+    if($miembro == 5){ 
+        $list_inf = $bd->lista_egres();
+        $nmiembro = "Alumni-Egresados";
+    } /* egresados */
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,12 +32,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php  printf('%s', $areaLab->getNombre()) ?>
-    </title>
+    <?php printf("<title>%s</title>",$nmiembro)?> 
 
     <!-- Bootstrap -->
-    <?php include("bootstrap_v5.php"); ?>
+    <?php include("bootstrap_v5.php"); ?> 
+
+    <!-- Para el menu -->
+    <!-- <script src="view/js/desplegar_menu.js"></script> -->
 
     <!--Iconos-->
     <link rel="shortcut icon" href="..//img/icono_lic_info.png">
@@ -38,46 +55,25 @@
             <br>
         </div>
 
-        <!-- Titulo  del Area del laboratorio -->
-        <div class="container">
-        <div class="row justify-content-start g-0">
+        <!-- Titulo de la pagina  -->
+        <div  class="container">
+            <div class="row justify-content-start g-0">
                 <div class="col-2 align-self-start">
-                    <!-- <img src="..//img/ProfesorInvestigador.png"  class="col-md-6 mb-3 ms-md-3" alt="..."> -->
+                    <img src="..//img/ProfesorInvestigador.png"  class="col-md-6 mb-3 ms-md-3" alt="...">
                 </div>
-                <div class="col-8 align-self-center">
-                    <?php
-                        printf('<h1>%s - %s</h1>', $areaLab->getNombre(), $areaLab->getAcronimo())
-                    ?>
+                <div class="col-6 align-self-center">
+                <?php printf("<h1>%s</h1>",$nmiembro)?>
                 </div>
             </div>
         </div>
-        
+
         <!-- Espacio -->
         <div class="container">
             <br>
         </div>
-
-        <!-- Objetivo del del laboratorio -->
-        <div class="container">
-            <h3>Objetivo del laboratorio</h3>
-            <br>
-            <?php
-                printf('<p> %s </p>', $areaLab->getObjetivo());
-            ?>
-        </div>
-
-         <!-- Espacio -->
-         <div class="container">
-            <br>
-        </div>
-
-        <!-- Miembros del laboratorio -->
-        <div class="container">
-            <h3>Profesores investigadores-Miembros</h3>
-            <br>
-            <br>
-                    <!-- Lista de Profesores investigadores -->
-        <<div class = container>
+ 
+        <!-- Lista de Profesores investigadores -->
+        <div class = container>
             <div class="row row-cols-1 row-cols-md-2 g-4">
 <?php
     foreach($list_inf as $Inf){
@@ -89,13 +85,13 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">');
-                        printf('<img src="/Users/%s/Perfil/%s" class="card-img-top" alt="...">', $Inf->getEmail(),$fotografia->getNombreArchivo());
+                        printf('<img src="../../Users/%s/Perfil/%s" class="card-img-top" alt="...">', $Inf->getEmail(),$fotografia->getNombreArchivo());
                         printf('</div>
                                     <div class="col-md-8 align-self-center">
                                         <div class="card-body">');
                                     printf('<h3 class="card-title"> %s %s</h4>',$Inf->getNombre(),$Inf->getApellido());
                                     /* print('<h6 class="card-subtitle mb-2 text-muted">Maestra en Ciencias Computacionales</h6>'); */
-                        printf('<a href="#" class="card-link">Ver C.V.</a>');
+                            printf('<a href="/view/html/curriculum.php?user=%s" class="card-link">Ver C.V.</a>',$Inf->getEmail());
             printf('</div>
             </div>
         </div>
@@ -106,22 +102,11 @@
             </div>
         </div>
 
-        </div>
-
         <!-- Espacio -->
         <div class="container">
             <br>
-        </div>
+            <br>
 
-        <!-- Espacio -->
-        <div class="container">
-            <br>
-        </div>
-        
-        <!-- Proyectos del laboratorio-->
-        <div class="container">
-            <h3>Proyectos</h3>
-            <br>
         </div>
     </main>
 

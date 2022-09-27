@@ -3,9 +3,10 @@
     include("..//..//model/Informacionpersonal.php");
     include("..//..//model/Multimedia.php");
     include("..//..//model/Area.php");
+    
+    $area=$_GET["area"];
 
     $bd = new BaseDatos();
-    $area = 2;
     $list_inf = $bd->lista_areas($area);
     $areaLab = $bd->info_area($area);
 
@@ -77,7 +78,7 @@
             <br>
             <br>
                     <!-- Lista de Profesores investigadores -->
-        <<div class = container>
+        <div class = container>
             <div class="row row-cols-1 row-cols-md-2 g-4">
 <?php
     foreach($list_inf as $Inf){
@@ -89,13 +90,13 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">');
-                        printf('<img src="/Users/%s/Perfil/%s" class="card-img-top" alt="...">', $Inf->getEmail(),$fotografia->getNombreArchivo());
+                        printf('<img src="../../Users/%s/Perfil/%s" class="card-img-top" alt="...">', $Inf->getEmail(),$fotografia->getNombreArchivo());
                         printf('</div>
                                     <div class="col-md-8 align-self-center">
                                         <div class="card-body">');
                                     printf('<h3 class="card-title"> %s %s</h4>',$Inf->getNombre(),$Inf->getApellido());
                                     /* print('<h6 class="card-subtitle mb-2 text-muted">Maestra en Ciencias Computacionales</h6>'); */
-                        printf('<a href="#" class="card-link">Ver C.V.</a>');
+                            printf('<a href="/view/html/curriculum.php?user=%s" class="card-link">Ver C.V.</a>',$Inf->getEmail());
             printf('</div>
             </div>
         </div>

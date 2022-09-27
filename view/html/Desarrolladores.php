@@ -14,11 +14,17 @@
 
 </head>
 <body>
+
     <div class="container">
         <?php include("menu_nav.php"); ?>
     </div>
 
     <main>
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+
         <!-- Desarrolladores -->
         <div id="des" class="container">
 
@@ -96,8 +102,12 @@
 
         </div>
 
-
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+        
     </main>
-    <?php include("footer.php"); ?>
+    <?php include("Footer.php"); ?>
 </body>
 </html>

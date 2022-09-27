@@ -1,3 +1,11 @@
+<?php
+    include("model/BaseDatos.php");
+    include("model/Laboratorio.php");
+
+    $bd = new BaseDatos();
+    $laboratorio = $bd->datos_lab();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,6 +33,13 @@
     </div>
 
     <main>
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+            <?php
+            ?>
+        </div>
+
         <!-- Carousel -->
         <div class="container">
             <div id="carousel_labti" class="carousel slide pointer-event" data-bs-ride="carousel">
@@ -117,29 +132,66 @@
         <div class="container">
             <div class="mt-5"></div>
         </div>
+
+        <!-- ¿Que es LabTI? -->
+        <div class="container" id="id_queeslabti">
+            <h2>¿Que es LabTI?</h2>
+            <?php
+                printf('<p>%s</p>', $laboratorio->getDefinicion());
+            ?>
+        </div>
+
+        <!-- Espacio -->
+        <div class="container">
+            <div class="mt-5"></div>
+        </div>
         
         <!-- Video -->
         <div class="container">
            <div class="ratio ratio-16x9">
                 <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FInformaticaUNCA%2Fvideos%2F582433396653906%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" allowfullscreen></iframe>
-                <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/axxDdYlVegg" title="Yoasobi - Yoru ni kakeru [Letra español & romaji]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
         </div>
 
         <!-- Espacio -->
         <div class="container">
-            <div class="mt-5"></div>
+            <br>
         </div>
 
-        <!-- Tesis y proyectos -->
-        <div class="container">
-            <div class="mt-5"></div>
-        </div> 
-        
+        <!-- Misión -->
+        <div id="id_mision" class="container">
+            <h2>Misión</h2>
+            <?php
+                printf('<p>%s</p>', $laboratorio->getMision());
+            ?>
+        </div>
+
         <!-- Espacio -->
         <div class="container">
-            <div class="mt-5"></div>
+            <br>
         </div>
+
+        <!-- Vision -->
+        <div id="id_vision" class="container">
+            <h2>Visión</h2>
+            <?php
+                printf('<p>%s</p>', $laboratorio->getVision());
+            ?>
+        </div>
+
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+
+        <!-- Video -->
+        <div class="container">
+           <div class="ratio ratio-16x9">
+                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FInformaticaUNCA%2Fvideos%2F582433396653906%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        
         
     </main>
     <?php include("footer.php"); ?>

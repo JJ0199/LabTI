@@ -23,6 +23,7 @@ CREATE TABLE Cuerpo_acad_estado (
 CREATE TABLE Form_acad_grado(
     Id INT AUTO_INCREMENT, 
     Grado VARCHAR(255) NOT NULL,
+    Abreviarura varchar(255) NOT NULL,
     PRIMARY KEY(Id)
 );
 
@@ -35,7 +36,7 @@ CREATE TABLE Semestre(
 CREATE TABLE Lista_ues(
     Id INT AUTO_INCREMENT, 
     Universidad VARCHAR(255) NOT NULL, 
-    Hipervínculo varchar(255) NOT NULL,
+    Hipervinculo varchar(255) NOT NULL,
     PRIMARY KEY(Id)
 );
 
@@ -48,7 +49,7 @@ CREATE TABLE Lista_carrera(
 CREATE TABLE Lista_emp_ues(
     Id INT AUTO_INCREMENT,
     Nombre_emp_ins VARCHAR(255) NOT NULL,
-    Hipervínculo VARCHAR(255) NOT NULL,
+    Hipervinculo VARCHAR(255) NOT NULL,
     PRIMARY KEY(Id)
 );
 
@@ -61,18 +62,6 @@ CREATE TABLE Usuario(
     PRIMARY KEY(Id)
 );
 
-CREATE TABLE Información_personal(
-    Id INT AUTO_INCREMENT,    
-    Nombre VARCHAR(255) NOT NULL, 
-    Apellido VARCHAR(255) NOT NULL, 
-    Fotografía VARCHAR(255) NOT NULL, 
-    Teléfono VARCHAR(255) NOT NULL, 
-    Email VARCHAR(255) NOT NULL, 
-    Id_usuario INT,
-    PRIMARY KEY(Id),
-    FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id)
-);
-
 CREATE TABLE Administrador(
     Id_usuario INT,
     PRIMARY KEY(Id_usuario),
@@ -82,11 +71,12 @@ CREATE TABLE Administrador(
 CREATE TABLE Multimedia (
     Id INT AUTO_INCREMENT, 
     Titulo VARCHAR(255) NOT NULL, 
-    Descripción VARCHAR(255) NOT NULL, 
+    Descripcion VARCHAR(255) NOT NULL, 
     Nombre_archivo VARCHAR(255) NOT NULL, 
     Fecha DATETIME,
     PRIMARY KEY(Id)
 );
+
 
 CREATE TABLE Video(
     Id_multimedia INT, 
@@ -100,10 +90,23 @@ CREATE TABLE Imagen(
     FOREIGN KEY(Id_multimedia) REFERENCES Multimedia(Id)
 );
 
-CREATE TABLE Evento_histórico(
+CREATE TABLE Información_personal(
+    Id INT AUTO_INCREMENT,    
+    Nombre VARCHAR(255) NOT NULL, 
+    Apellido VARCHAR(255) NOT NULL, 
+    Fotografia int, 
+    Telefono VARCHAR(255) NOT NULL, 
+    Email VARCHAR(255) NOT NULL, 
+    Id_usuario INT,
+    PRIMARY KEY(Id),
+    FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id),
+    FOREIGN key(fotografia) REFERENCES Multimedia(Id)
+);
+
+CREATE TABLE Evento_historico(
     Id INT AUTO_INCREMENT,
     Nombre_evento VARCHAR(255) NOT NULL, 
-    Descripción MEDIUMTEXT NOT NULL,
+    Descripcion MEDIUMTEXT NOT NULL,
     Fecha DATE,
     PRIMARY KEY(Id)
 );
@@ -121,9 +124,9 @@ CREATE TABLE Eventos(
     Id INT AUTO_INCREMENT, 
     Nombre_evento VARCHAR(255) NOT NULL,
     Descripción MEDIUMTEXT NOT NULL, 
-    Teléfono VARCHAR(255) NOT NULL, 
+    Telefono VARCHAR(255) NOT NULL, 
     Email VARCHAR(255) NOT NULL, 
-    Hipervínculo VARCHAR(255) NOT NULL,
+    Hipervinculo VARCHAR(255) NOT NULL,
     Fecha DATE,
     PRIMARY KEY(Id)
 );
@@ -155,12 +158,12 @@ CREATE TABLE Multimedia_Administrador(
     FOREIGN KEY(Id_administrador) REFERENCES Administrador(Id_usuario)
 );
 
-CREATE TABLE Administrador_Evento_histórico(
+CREATE TABLE Administrador_Evento_historico(
     Id_evento_historico INT,
     Id_administrador INT,
     Fecha DATETIME,
     PRIMARY KEY(Id_evento_historico, Id_administrador),
-    FOREIGN KEY(Id_evento_historico) REFERENCES Evento_histórico(Id),
+    FOREIGN KEY(Id_evento_historico) REFERENCES Evento_historico(Id),
     FOREIGN KEY(Id_administrador) REFERENCES Administrador(Id_usuario)
 );
 
@@ -180,13 +183,13 @@ CREATE TABLE Administrador_Eventos(
     FOREIGN KEY(Id_eventos) REFERENCES Eventos(Id)
 );
 
-CREATE TABLE Multimedia_Evento_histórico(
+CREATE TABLE Multimedia_Evento_historico(
     Id_multimedia INT,
     Id_evento_historico INT,
     Fecha DATETIME,
     PRIMARY KEY(Id_multimedia, Id_evento_historico),
     FOREIGN KEY(Id_multimedia) REFERENCES Multimedia(Id),
-    FOREIGN KEY(Id_evento_historico) REFERENCES Evento_histórico(Id)
+    FOREIGN KEY(Id_evento_historico) REFERENCES Evento_historico(Id)
 );
 
 CREATE TABLE Multimedia_Noticia(
@@ -209,9 +212,10 @@ CREATE TABLE Multimedia_Eventos(
 
 CREATE TABLE Profesor_investigador(
     Id_usuario INT, 
-    Grado_actual VARCHAR(255) NOT NULL,  
+    Grado_actual INT,  
     PRIMARY KEY(Id_usuario),
-    FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id)
+    FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id),
+    FOREIGN KEY(Grado_actual) REFERENCES Form_acad_grado(Id)
 );
 
 CREATE Table Multimedia_Profesor_investigador(
@@ -235,10 +239,10 @@ CREATE TABLE Laboratorio(
 );
 
 
-CREATE TABLE Área(
+CREATE TABLE Area(
     Id INT AUTO_INCREMENT,
     Nombre VARCHAR(255) NOT NULL, 
-    Acrónimo VARCHAR(255) NOT NULL, 
+    Acronimo VARCHAR(255) NOT NULL, 
     Objetivo TEXT, 
     Id_laboratorio INT, 
     Id_pi_encargado INT,
@@ -247,23 +251,23 @@ CREATE TABLE Área(
     FOREIGN KEY(Id_pi_encargado) REFERENCES Profesor_investigador(Id_usuario)
 );
 
-CREATE TABLE Profesor_investigador_Área(
+CREATE TABLE Profesor_investigador_area(
     Id_profesor_investigador INT,
-    Id_área_laboratorio INT,
-    PRIMARY KEY (Id_profesor_investigador, Id_área_laboratorio),
+    Id_area_laboratorio INT,
+    PRIMARY KEY (Id_profesor_investigador, Id_area_laboratorio),
     FOREIGN KEY(Id_profesor_investigador) REFERENCES Profesor_investigador(Id_usuario),
-    FOREIGN KEY(Id_área_laboratorio) REFERENCES Área(Id)
+    FOREIGN KEY(Id_area_laboratorio) REFERENCES Area(Id)
 );
 
 CREATE TABLE Proyecto(
     Id INT AUTO_INCREMENT, 
     Estatus INT,
     Nombre_proyecto VARCHAR(255) NOT NULL,
-    Problemática MEDIUMTEXT NOT NULL, 
-    Solución_propuesta MEDIUMTEXT NOT NULL, 
+    Problematica MEDIUMTEXT NOT NULL, 
+    Solucion_propuesta MEDIUMTEXT NOT NULL, 
     Objetivos MEDIUMTEXT NOT NULL, 
     Resultados MEDIUMTEXT NOT NULL, 
-    Informe_técnico VARCHAR(255) NOT NULL,
+    Informe_tecnico VARCHAR(255) NOT NULL,
     Id_profesor_invg INT,
     PRIMARY KEY (Id),
     FOREIGN KEY(Id_profesor_invg) REFERENCES Profesor_investigador(Id_usuario),
@@ -278,7 +282,7 @@ CREATE TABLE Multimedia_Proyecto(
     FOREIGN KEY (Id_proyecto) REFERENCES Proyecto(Id)
 );
 
-CREATE TABLE Cuerpo_académico(
+CREATE TABLE Cuerpo_academico(
     Id INT AUTO_INCREMENT, 
     Nombre VARCHAR(255) NOT NULL,
     PRODEP VARCHAR(255) NOT NULL, 
@@ -298,7 +302,7 @@ CREATE TABLE Profesor_invg_Cuerpo_acad(
     Id_cuerpo_acad INT,
     PRIMARY KEY(Id_usuario, Id_cuerpo_acad),
     FOREIGN KEY(Id_usuario) REFERENCES Profesor_investigador(Id_usuario),
-    FOREIGN KEY(Id_cuerpo_acad) REFERENCES Cuerpo_académico(Id)
+    FOREIGN KEY(Id_cuerpo_acad) REFERENCES Cuerpo_academico(Id)
 );
 
 CREATE TABLE Profesor_invg_Lineas_invg(
@@ -312,7 +316,7 @@ CREATE TABLE Cuerpo_acad_Lineas_invg(
     Id_cuerpo_acad INT, 
     Id_lineas_invg INT,
     PRIMARY KEY(Id_cuerpo_acad, Id_lineas_invg),
-    FOREIGN KEY (Id_cuerpo_acad) REFERENCES Cuerpo_académico(Id),
+    FOREIGN KEY (Id_cuerpo_acad) REFERENCES Cuerpo_academico(Id),
     FOREIGN KEY(Id_lineas_invg) REFERENCES Lineas_investigacion(Id)
 );
 
@@ -320,14 +324,14 @@ CREATE TABLE Alumno_estancia_profesional(
     Id_usuario INT, 
     Semestre INT, 
     Carrera INT,  
-    Institución_procedencia INT, 
+    Institucion_procedencia INT, 
     Id_profesor_invg INT, 
     Id_proyecto INT,
     primary key(Id_usuario),
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id),
     FOREIGN KEY(Semestre) REFERENCES Semestre(Id),
     FOREIGN KEY(Carrera) REFERENCES Lista_carrera(Id),
-    FOREIGN KEY(Institución_procedencia) REFERENCES Lista_ues(Id),
+    FOREIGN KEY(Institucion_procedencia) REFERENCES Lista_ues(Id),
     FOREIGN KEY(Id_profesor_invg) REFERENCES Profesor_investigador(Id_usuario),
     FOREIGN KEY(Id_proyecto) REFERENCES Proyecto(Id)
     
@@ -337,14 +341,14 @@ CREATE TABLE Alumno_servicio_social(
     Id_usuario INT, 
     Semestre INT, 
     Carrera INT,  
-    Institución_procedencia INT, 
+    Institucion_procedencia INT, 
     Id_profesor_invg INT, 
     Id_proyecto INT,
     PRIMARY KEY(Id_usuario),
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id),
     FOREIGN KEY(Semestre) REFERENCES Semestre(Id),
     FOREIGN KEY(Carrera) REFERENCES Lista_carrera(Id),
-    FOREIGN KEY(Institución_procedencia) REFERENCES Lista_ues(Id),
+    FOREIGN KEY(Institucion_procedencia) REFERENCES Lista_ues(Id),
     FOREIGN KEY(Id_profesor_invg) REFERENCES Profesor_investigador(Id_usuario),
     FOREIGN KEY(Id_proyecto) REFERENCES Proyecto(Id)
 );
@@ -352,11 +356,11 @@ CREATE TABLE Alumno_servicio_social(
 CREATE TABLE Colaborador_externo(
     Id_usuario INT,
     Grado_actual INT,
-    Institución_procedencia INT,
+    Institucion_procedencia INT,
     PRIMARY KEY(Id_usuario),
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id),
     FOREIGN KEY(Grado_actual) REFERENCES Form_acad_grado(Id),
-    FOREIGN KEY(Institución_procedencia) REFERENCES Lista_emp_ues(Id)
+    FOREIGN KEY(Institucion_procedencia) REFERENCES Lista_emp_ues(Id)
 );
 
 CREATE TABLE Colaborador_proyecto(
@@ -396,33 +400,33 @@ CREATE TABLE Alumni(
     FOREIGN key(Grado_actual) REFERENCES Form_acad_grado(Id)
 );
 
-CREATE TABLE Publicación(
+CREATE TABLE Publicacion(
     Id INT AUTO_INCREMENT, 
     Nombre VARCHAR(255) NOT NULL,
     PRIMARY KEY (Id)
 );
 
 CREATE TABLE Libro(
-    Id_publicación  INT, 
+    Id_publicacion  INT, 
     ISBN VARCHAR(255) NOT NULL,
-    PRIMARY KEY(Id_publicación),
-    FOREIGN KEY(Id_publicación) REFERENCES Publicación(Id)
+    PRIMARY KEY(Id_publicacion),
+    FOREIGN KEY(Id_publicacion) REFERENCES Publicacion(Id)
 );
 
 CREATE TABLE Cap_libro(
-    Id_publicación INT, 
+    Id_publicacion INT, 
     ISBN VARCHAR(255) NOT NULL, 
     DOI VARCHAR(255) NOT NULL,
-    PRIMARY KEY(Id_publicación),
-    FOREIGN KEY(Id_publicación) REFERENCES Publicación(Id)
+    PRIMARY KEY(Id_publicacion),
+    FOREIGN KEY(Id_publicacion) REFERENCES Publicacion(Id)
 );
 
 CREATE TABLE Articulo(
-    Id_publicación INT, 
+    Id_publicacion INT, 
     ISNN VARCHAR(255) NOT NULL, 
     No_pag INT,
-    PRIMARY KEY(Id_publicación),
-    FOREIGN KEY(Id_publicación) REFERENCES Publicación(Id)
+    PRIMARY KEY(Id_publicacion),
+    FOREIGN KEY(Id_publicacion) REFERENCES Publicacion(Id)
 );
 
 CREATE TABLE Coautor(
@@ -431,26 +435,26 @@ CREATE TABLE Coautor(
     PRIMARY KEY(Id)
 );
 
-CREATE TABLE Publicación_Coautor(
-    Id_publicación INT, 
+CREATE TABLE Publicacion_Coautor(
+    Id_publicacion INT, 
     Id_coautor INT,
-    PRIMARY KEY(Id_publicación, Id_coautor),
-    FOREIGN KEY(Id_publicación) REFERENCES Publicación(Id),
+    PRIMARY KEY(Id_publicacion, Id_coautor),
+    FOREIGN KEY(Id_publicacion) REFERENCES Publicacion(Id),
     FOREIGN KEY(Id_coautor) REFERENCES Coautor(Id)
 );
 
 CREATE TABLE Usuario_Publicación(
     Id_usuario INT,
-    Id_publicación INT,
-    PRIMARY KEY(Id_usuario, Id_publicación),
+    Id_publicacion INT,
+    PRIMARY KEY(Id_usuario, Id_publicacion),
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id),
-    FOREIGN KEY(Id_publicación) REFERENCES Publicación(Id)
+    FOREIGN KEY(Id_publicacion) REFERENCES Publicacion(Id)
 );
 
 CREATE TABLE Posisión_trabajo(
     Id INT AUTO_INCREMENT,
     Puesto VARCHAR(255) NOT NULL, 
-    Institución VARCHAR(255) NOT NULL, 
+    Institucion VARCHAR(255) NOT NULL, 
     Id_usuario INT,
     PRIMARY KEY(Id),
     FOREIGN KEY(Id_usuario) REFERENCES  Usuario(Id)
@@ -459,7 +463,7 @@ CREATE TABLE Posisión_trabajo(
 CREATE TABLE Experiencia_laboral(
     Id INT AUTO_INCREMENT, 
     Puesto VARCHAR(255) NOT NULL,
-    Institución VARCHAR(255) NOT NULL, 
+    Institucion VARCHAR(255) NOT NULL, 
     Fecha_inicio DATE NOT NULL, 
     Fecha_fin DATE NOT NULL,
     PRIMARY KEY(Id)
@@ -473,39 +477,39 @@ CREATE TABLE Experiencia_lab_Usuario(
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id)
 );
 
-CREATE TABLE Formación_académica(
+CREATE TABLE Formacion_academica(
     Id INT AUTO_INCREMENT, 
     Grado VARCHAR(255) NOT NULL, 
-    Área_especialidad VARCHAR(255) NOT NULL, 
-    Institución INT,
+    Area_especialidad VARCHAR(255) NOT NULL, 
+    Institucion INT,
     Fecha_inicio DATE NOT NULL, 
     Fecha_fin DATE NOT NULL,
     PRIMARY KEY(Id), 
-    FOREIGN KEY(Institución) REFERENCES Lista_ues(Id)
+    FOREIGN KEY(Institucion) REFERENCES Lista_ues(Id)
 );
 
-CREATE TABLE Formación_acad_Usuario(
-    Id_formación_academica INT,
+CREATE TABLE Formacion_acad_Usuario(
+    Id_formacion_academica INT,
     Id_usuario INT,
-    PRIMARY KEY(Id_formación_academica, Id_usuario),
-    FOREIGN KEY(Id_formación_academica) REFERENCES Formación_académica(Id),
+    PRIMARY KEY(Id_formacion_academica, Id_usuario),
+    FOREIGN KEY(Id_formacion_academica) REFERENCES Formacion_academica(Id),
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id)
 );
 
-CREATE TABLE Distinción_académica(
+CREATE TABLE Distincion_academica(
     Id INT AUTO_INCREMENT, 
-    Distinción VARCHAR(255) NOT NULL, 
-    Institución VARCHAR(255) NOT NULL, 
+    Distincion VARCHAR(255) NOT NULL, 
+    Institucion VARCHAR(255) NOT NULL, 
     Fecha_inicio DATE, 
     Fecha_fin DATE,
     PRIMARY KEY(Id)
 );
 
-CREATE TABLE Distinción_academica_Usuario(
-    Id_formación_academica INT, 
+CREATE TABLE Distincion_academica_Usuario(
+    Id_formacion_academica INT, 
     Id_usuario INT,
-    PRIMARY KEY(Id_formación_academica, Id_usuario),
-    FOREIGN KEY(Id_formación_academica) REFERENCES Formación_académica(Id),
+    PRIMARY KEY(Id_formacion_academica, Id_usuario),
+    FOREIGN KEY(Id_formacion_academica) REFERENCES Formacion_academica(Id),
     FOREIGN KEY(Id_usuario) REFERENCES Usuario(Id)
 );
 

@@ -25,6 +25,6 @@
         <?php echo $link ?>
     </main>
 
-    <?php include("footer.php"); ?>
+    <?php include("Footer.php"); ?>
 </body>
 </html>

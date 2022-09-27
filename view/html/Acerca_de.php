@@ -27,46 +27,6 @@
     </div>
 
     <main>
-        
-        <!-- Espacio -->
-        <div class="container">
-            <br>
-        </div>
-
-        <!-- ¿Que es LabTI? -->
-        <div class="container" id="id_queeslabti">
-            <h2>¿Que es LabTI?</h2>
-            <?php
-                printf('<p>%s</p>', $laboratorio->getDefinicion());
-            ?>
-        </div>
-
-        <!-- Espacio -->
-        <div class="container">
-            <br>
-        </div>
-
-        <!-- Misión -->
-        <div id="id_mision" class="container">
-            <h2>Misión</h2>
-            <?php
-                printf('<p>%s</p>', $laboratorio->getMision());
-            ?>
-        </div>
-
-       <!-- Espacio -->
-        <div class="container">
-            <br>
-        </div>
- 
-        <!-- Vision -->
-        <div id="id_vision" class="container">
-            <h2>Visión</h2>
-            <?php
-                printf('<p>%s</p>', $laboratorio->getVision());
-            ?>
-        </div>
-
         <!-- Espacio -->
         <div class="container">
             <br>
@@ -113,8 +73,10 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!4v1663875153084!6m8!1m7!1sw5TiNt1fY9mSNBinB1_XEA!2m2!1d18.13510447379684!2d-97.09705874914933!3f71.45409423395809!4f-26.282944461073562!5f1.1924812503605782" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+
+        
     </main>
 
-    <?php include("footer.php"); ?>
+    <?php include("Footer.php"); ?>
 </body>
 </html>
