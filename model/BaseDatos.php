@@ -183,8 +183,6 @@
         }
     }
 
-
-
     public function img_pfi($idimg){
         $consulta ="SELECT Nombre_archivo FROM multimedia, información_personal WHERE multimedia.Id=$idimg;";
         $resultado = $this->sql->query($consulta);
@@ -201,4 +199,25 @@
 
     }
 
+    public function info_personal($user){
+        $valor=strval($user);
+        $consulta ="SELECT Id, Nombre, Apellido, Imagen, Teléfono, Email FROM Información_personal WHERE Email=\"$valor\";";
+        $resultado = $this->sql->query($consulta);
+        if($resultado){
+            $informacion = new Informacionpersonal;
+            while($registro = $resultado->fetch_assoc()){
+                $informacion->setId($registro['Id']);
+                $informacion->setNombre($registro['Nombre']);
+                $informacion->setApellido($registro['Apellido']);
+                $informacion->setFotografia($registro['Imagen']);
+                $informacion->setTelefono($registro['Teléfono']);
+                $informacion->setEmail($registro['Email']);
+            }
+            
+            $resultado->close();
+            return $informacion;
+        }else{
+            $resultado->close();
+        }
+    }
 }

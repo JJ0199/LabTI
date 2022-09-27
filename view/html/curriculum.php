@@ -1,6 +1,18 @@
 <?php
-    $user=$_GET["user"];
+    include("..//..//model/BaseDatos.php");
+    include("..//..//model/Informacionpersonal.php");
+    include("..//..//model/Multimedia.php");
+    include("..//..//model/Area.php");
+
+    $user=strval($_GET["user"]);
+
+    $bd = new BaseDatos();
     
+    $infopersonal = $bd->info_personal($user);
+
+    $idimg = $infopersonal->getFotografia();
+    $fotografia = $bd->img_pfi($idimg);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,6 +35,49 @@
     </div>
 
     <main>
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+
+        <!-- Información personal-->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-3 align-self-start">
+                    <?php
+                        printf('<img src="../../Users/%s/Perfil/%s" class="" alt="...">', $infopersonal->getEmail(),$fotografia->getNombreArchivo());
+                    ?>
+                </div>
+                <div class="col-9 align-self-start">
+                    <?php
+                        printf('<h2> Dr. %s %s</h2>',$infopersonal->getNombre(),$infopersonal->getApellido());
+                    ?>
+                    <div class="row">
+                        <?php
+                            printf('<h6>Email: %s </h6>', $infopersonal->getEmail());
+                        ?>
+                    </div>
+                    <div class="row">
+                        <?php
+                            printf('<h6>Teléfono: %s </h6>', $infopersonal->getTelefono());
+                        ?>
+                    </div>
+                    
+                    <div class="row">
+                        <?php
+
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Espacio -->
+        <div class="container">
+            <br>
+        </div>
+        
+        <!-- Información del CV -->
         <div class="container">
 
             <nav>

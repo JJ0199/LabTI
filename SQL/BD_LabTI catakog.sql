@@ -1,5 +1,5 @@
-CREATE DATABASE LabTI;
-USE LabTI;
+CREATE DATABASE LabTI2;
+USE LabTI2;
 
 /* CATALOGOS DATABASE */
 CREATE TABLE Tesis_estado(
@@ -90,7 +90,7 @@ CREATE TABLE Imagen(
     FOREIGN KEY(Id_multimedia) REFERENCES Multimedia(Id)
 );
 
-CREATE TABLE Información_personal(
+CREATE TABLE Informacion_personal(
     Id INT AUTO_INCREMENT,    
     Nombre VARCHAR(255) NOT NULL, 
     Apellido VARCHAR(255) NOT NULL, 
