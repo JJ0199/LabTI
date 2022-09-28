@@ -85,13 +85,13 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">');
-                        printf('<img src="../../Users/%s/Perfil/%s" class="card-img-top" alt="...">', $Inf->getEmail(),$fotografia->getNombreArchivo());
+                        printf('<img src="/LabTI/Users/%s/Perfil/%s" class="card-img-top" alt="...">', $Inf->getEmail(),$fotografia->getNombreArchivo());
                         printf('</div>
                                     <div class="col-md-8 align-self-center">
                                         <div class="card-body">');
                                     printf('<h3 class="card-title"> %s %s</h4>',$Inf->getNombre(),$Inf->getApellido());
                                     /* print('<h6 class="card-subtitle mb-2 text-muted">Maestra en Ciencias Computacionales</h6>'); */
-                            printf('<a href="/view/html/curriculum.php?user=%s" class="card-link">Ver C.V.</a>',$Inf->getEmail());
+                            printf('<a href="/LabTI/view/html/curriculum.php?user=%s" class="card-link">Ver C.V.</a>',$Inf->getEmail());
             printf('</div>
             </div>
         </div>

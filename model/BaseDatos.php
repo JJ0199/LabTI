@@ -159,6 +159,7 @@
 
                 array_push($list_inf, $Inf);
             }
+            $resultado->close();
             return $list_inf;
         }else{
             $resultado->close();
@@ -216,6 +217,26 @@
             
             $resultado->close();
             return $informacion;
+        }else{
+            $resultado->close();
+        }
+    }
+
+    public function tabla_proyecto(){
+        $listproyecto = array();
+        $consulta = "SELECT proyecto.Id,proyecto.Nombre_proyecto,proyecto_estado.Estado FROM proyecto, proyecto_estado;";
+        $resultado = $this->sql->query($consulta);
+        if($resultado){
+            while($registro = $resultado->fetch_assoc()){
+                $proyecto = new Proyecto();
+                $proyecto->setId($registro['Id']);
+                $proyecto->setNombre($registro['Nombre_proyecto']);
+                $proyecto->setStatus($registro['Estado']);
+
+                array_push($listproyecto,$proyecto);
+            }
+            $resultado->close();
+            return $listproyecto;
         }else{
             $resultado->close();
         }

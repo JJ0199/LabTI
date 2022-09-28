@@ -58,7 +58,7 @@ CREATE TABLE Lista_emp_ues(
 CREATE TABLE Usuario(
     Id INT AUTO_INCREMENT,
     Nombre_usuario VARCHAR(255) NOT NULL,
-    Contraseña VARCHAR(255) NOT NULL,
+    Contrasena VARCHAR(255) NOT NULL,
     PRIMARY KEY(Id)
 );
 
@@ -123,7 +123,7 @@ CREATE TABLE Noticia(
 CREATE TABLE Eventos(
     Id INT AUTO_INCREMENT, 
     Nombre_evento VARCHAR(255) NOT NULL,
-    Descripción MEDIUMTEXT NOT NULL, 
+    Descripcion MEDIUMTEXT NOT NULL, 
     Telefono VARCHAR(255) NOT NULL, 
     Email VARCHAR(255) NOT NULL, 
     Hipervinculo VARCHAR(255) NOT NULL,
@@ -231,10 +231,10 @@ CREATE TABLE Laboratorio(
     Id INT AUTO_INCREMENT,
     Nombre VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,  
-    Teléfono varchar(255) NOT NULL, 
-    Dirección varchar(255) NOT NULL, 
-    Misión TEXT, 
-    Visión TEXT, 
+    Telefono varchar(255) NOT NULL, 
+    Direccion varchar(255) NOT NULL, 
+    Mision TEXT, 
+    Vision TEXT, 
     PRIMARY KEY(Id)
 );
 
@@ -443,7 +443,7 @@ CREATE TABLE Publicacion_Coautor(
     FOREIGN KEY(Id_coautor) REFERENCES Coautor(Id)
 );
 
-CREATE TABLE Usuario_Publicación(
+CREATE TABLE Usuario_Publicacion(
     Id_usuario INT,
     Id_publicacion INT,
     PRIMARY KEY(Id_usuario, Id_publicacion),
@@ -451,7 +451,7 @@ CREATE TABLE Usuario_Publicación(
     FOREIGN KEY(Id_publicacion) REFERENCES Publicacion(Id)
 );
 
-CREATE TABLE Posisión_trabajo(
+CREATE TABLE Posision_trabajo(
     Id INT AUTO_INCREMENT,
     Puesto VARCHAR(255) NOT NULL, 
     Institucion VARCHAR(255) NOT NULL, 
