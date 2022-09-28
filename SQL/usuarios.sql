@@ -1,4 +1,4 @@
-insert into usuario(Nombre_usuario, Contraseña) VALUES
+insert into usuario(Nombre_usuario, Contrasena) VALUES
 ("jpaxtian@unca.edu.mx", "$2y$10$cRtv1hEFNQ2bb.CqbWHkzeRbKQCtdLj7.D4mDU192eRverkFXzZgq"),
 ("masanchez@unca.edu.mx", "$2y$10$cRtv1hEFNQ2bb.CqbWHkzeRbKQCtdLj7.D4mDU192eRverkFXzZgq"),
 ("cmartinez@unca.edu.mx", "$2y$10$cRtv1hEFNQ2bb.CqbWHkzeRbKQCtdLj7.D4mDU192eRverkFXzZgq"),

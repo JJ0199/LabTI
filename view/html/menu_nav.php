@@ -5,8 +5,8 @@
     ?>
     <!-- Icono -->
     <div class="col align-self-center">
-        <a href="/LabTI/index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img src="/LabTI/view/img/icono_lic_info_v5.png" alt="" width="300" height="120" class="d-inline-block align-text-top">
+        <a href="/labti/index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="/labti/view/img/icono_lic_info_v5.png" alt="" width="300" height="120" class="d-inline-block align-text-top">
             <!-- <span class="fs-4">  LabTic </span> -->
         </a>
     </div>
@@ -25,7 +25,7 @@
 
                         <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="/LabTI/index.php">LabTI</a>
+                            <a class="nav-link " aria-current="page" href="/labti/index.php">LabTI</a>
                         </li>
 
                         <!-- áreas del laboratorio - lista desplegable -->
@@ -35,23 +35,23 @@
                             <!-- Lista de las areas del laboratorio -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dmenu">
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Areas.php?area=1">Sistemas inteligentes y distribuidos</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Areas.php?area=1">Sistemas inteligentes y distribuidos</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Areas.php?area=2">Electronica</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Areas.php?area=2">Electronica</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Areas.php?area=3">Investigación y desarrollo de software</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Areas.php?area=3">Investigación y desarrollo de software</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Areas.php?area=4">Experiencia de usuario UX</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Areas.php?area=4">Experiencia de usuario UX</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Areas.php?area=5">Redes</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Areas.php?area=5">Redes</a>
                                 </li>
                             </ul>
 
@@ -64,23 +64,23 @@
                             <!-- Lista de miembros -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Miembros.php?miembro=1">Profesores investigadores</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Miembros.php?miembro=1">Profesores investigadores</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Miembros.php?miembro=2">Colaboradores</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Miembros.php?miembro=2">Colaboradores</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Miembros.php?miembro=3">Servicio Social</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Miembros.php?miembro=3">Servicio Social</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Miembros.php?miembro=4">Estancias profesionales</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Miembros.php?miembro=4">Estancias profesionales</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Miembros.php?miembro=5">Alumni-Egresados</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Miembros.php?miembro=5">Alumni-Egresados</a>
                                 </li>
                             </ul>
                         </li>
@@ -92,11 +92,11 @@
                             <!-- Lista investigación -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Proyectos.php">Proyectos</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Proyectos.php">Proyectos</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Cuerpos_académicos.php">Cuerpos académicos</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Cuerpos_académicos.php">Cuerpos académicos</a>
                                 </li>
                             </ul>
                             
@@ -109,18 +109,18 @@
                             <!-- Lista difusión -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Historia.php">Historia</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Historia.php">Historia</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Noticias.php">Noticias</a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" href="/view/html/Eventos.php">Eventos</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Noticias.php">Noticias</a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="/view/html/Multimedia.php">Multimedia</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Eventos.php">Eventos</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="/labti/view/html/Multimedia.php">Multimedia</a>
                                 </li>
                             </ul>
                         </li>
@@ -131,10 +131,10 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Acerca_de.php#id_contactenos">Contacto</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Acerca_de.php#id_contactenos">Contacto</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/LabTI/view/html/Desarrolladores.php">Desarrolladores</a>
+                                    <a class="dropdown-item" href="/labti/view/html/Desarrolladores.php">Desarrolladores</a>
                                 </li>
                             </ul>
 

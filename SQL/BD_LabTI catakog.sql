@@ -234,7 +234,8 @@ CREATE TABLE Laboratorio(
     Telefono varchar(255) NOT NULL, 
     Direccion varchar(255) NOT NULL, 
     Mision TEXT, 
-    Vision TEXT, 
+    Vision TEXT,
+    Descripcion TEXT,
     PRIMARY KEY(Id)
 );
 
